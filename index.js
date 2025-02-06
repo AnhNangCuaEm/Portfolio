@@ -627,7 +627,8 @@ document.addEventListener('DOMContentLoaded', () => {
                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
                         </svg>
                      </button>
-                     <div id="modalContent" class="p-8 bg-black/30 backdrop-blur-xl rounded-2xl max-w-4xl mx-auto border border-white/10 shadow-2xl">
+                     <div id="modalContent" class="p-8 bg-black/80 backdrop-blur-xl rounded-2xl max-w-4xl mx-auto border border-white/10 shadow-2xl 
+                                 supports-[backdrop-filter]:bg-black/30">
                      </div>
                   </div>
                </div>
@@ -888,7 +889,8 @@ document.addEventListener('DOMContentLoaded', () => {
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
                     </svg>
                 </button>
-                <div id="modalContent" class="p-8 bg-black/30 backdrop-blur-xl rounded-2xl w-full mx-auto border border-white/10 shadow-2xl">
+                <div id="modalContent" class="p-8 bg-black/80 backdrop-blur-xl rounded-2xl max-w-4xl mx-auto border border-white/10 shadow-2xl 
+                            supports-[backdrop-filter]:bg-black/30">
                 </div>
             </div>
          </div>
