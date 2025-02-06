@@ -621,14 +621,13 @@ document.addEventListener('DOMContentLoaded', () => {
                            transform scale-0 opacity-0 transition-all duration-300 ease-out">
                   <div class="relative">
                      <button onclick="closeProjectModal()" 
-                             class="absolute -right-4 -top-4 bg-white/5 backdrop-blur-xl border border-white/10 rounded-full p-2 
+                             class="absolute -right-0 -top-0 bg-white/5 backdrop-blur-xl border border-white/10 rounded-full p-2 
                                     text-white hover:text-purple-400 transition-colors duration-300 hover:border-purple-400/50 z-10">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
                         </svg>
                      </button>
-                     <div id="modalContent" class="p-8 bg-black/80 backdrop-blur-xl rounded-2xl max-w-4xl mx-auto border border-white/10 shadow-2xl 
-                                 supports-[backdrop-filter]:bg-black/30">
+                     <div id="modalContent" class="p-8 bg-black/30 rounded-2xl border border-white/10 shadow-2xl">
                      </div>
                   </div>
                </div>
@@ -879,18 +878,17 @@ document.addEventListener('DOMContentLoaded', () => {
       modal.classList = "fixed inset-0 z-50 hidden flex items-center justify-center p-4";
       modal.innerHTML = `
          <div class="absolute inset-0" onclick="closeProjectModal()"></div>
-         <div class="bg-white/5 backdrop-blur-xl rounded-2xl w-full max-w-3xl mx-auto border border-white/10 shadow-2xl 
+         <div class="bg-white/5 backdrop-blur-xl rounded-3xl w-full max-w-3xl mx-auto border border-white/10 shadow-2xl 
                      transform scale-0 opacity-0 transition-all duration-300 ease-out relative max-h-[90vh]">
-            <div class="relative">
+            <div class="relative rounded-3xl">
                 <button onclick="closeProjectModal()" 
-                        class="absolute -right-4 -top-4 bg-white/5 backdrop-blur-xl border border-white/10 rounded-full p-2 
+                        class="absolute -right-0 -top-0 bg-white/5 backdrop-blur-xl border border-white/10 rounded-full p-2 
                                text-white hover:text-purple-400 transition-colors duration-300 hover:border-purple-400/50 z-10">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
                     </svg>
                 </button>
-                <div id="modalContent" class="p-8 bg-black/80 backdrop-blur-xl rounded-2xl max-w-4xl mx-auto border border-white/10 shadow-2xl 
-                            supports-[backdrop-filter]:bg-black/30">
+                <div id="modalContent" class="p-8 bg-black/30 rounded-3xl border border-white/10 shadow-2xl">
                 </div>
             </div>
          </div>
@@ -898,13 +896,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Set content with scrollable area
       document.getElementById('modalContent').innerHTML = `
-         <div class="space-y-6 max-h-[calc(90vh-4rem)] overflow-y-auto pr-2">
+         <div class="space-y-6 max-h-[calc(85vh-4rem)] overflow-y-auto rounded-xl">
             <!-- Image Gallery -->
             <div class="relative">
                 <div class="flex space-x-4 overflow-x-auto scrollbar-thin scrollbar-thumb-purple-500/30 scrollbar-track-white/5 rounded-xl">
-                    <img src="${project.image}" alt="${project.title}" class="w-auto h-96 object-cover rounded-xl">
+                    <img src="${project.image}" alt="${project.title}" class="w-auto object-cover rounded-xl aspect-16/9">
                     ${project.gallery ? project.gallery.map(img => `
-                        <img src="${img}" alt="${project.title}" class="w-auto h-96 object-cover rounded-xl">
+                        <img src="${img}" alt="${project.title}" class="w-auto object-cover rounded-xl aspect-16/9">
                     `).join('') : ''}
                 </div>
                 <div class="w-full text-center text-gray-400 text-sm mt-2">Swipe to see more</div>
