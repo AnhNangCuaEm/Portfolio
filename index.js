@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
    // Content Area
    const contentArea = `
-        <div id="content" class="flex-1 p-6 max-w-6xl lg:ml-64">
+        <div id="content" class="flex-1 p-6 max-w-7xl lg:ml-64">
             ${renderInfo()} <!-- Default content -->
         </div>
     `;
@@ -322,16 +322,20 @@ document.addEventListener('DOMContentLoaded', () => {
    const scrollStyle = document.createElement('style');
    scrollStyle.textContent = `
       .project-card {
-         transition: opacity 0.6s ease-out, transform 0.3s ease-out;
+         opacity: 0;
+         transform: translateY(20px);
+         transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
       }
       
       .project-card.show {
          opacity: 1;
          transform: translateY(0);
+         transition: opacity 0.5s ease-out, transform 0.5s ease-out;
       }
 
       .project-card:hover {
          transform: scale(1.02);
+         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
       }
    `;
    document.head.appendChild(scrollStyle);
@@ -339,7 +343,7 @@ document.addEventListener('DOMContentLoaded', () => {
    // Content Renderers
    function renderInfo() {
       return `
-          <div class="w-full animate-fade-in-up">
+          <div class="w-fit p-4 animate-fade-in-up">
               <div class="bg-white/5 backdrop-blur-xl rounded-2xl p-8 border border-white/10 shadow-2xl 
                           opacity-0 translate-y-4 animate-content">
                   <div class="flex flex-col items-center gap-8">
@@ -412,10 +416,8 @@ document.addEventListener('DOMContentLoaded', () => {
    const projects = [
       {
          title: 'GreenSpace',
-         description: '公園やイベントの情報を提供するサイトと、管理者専用の管理ページ',
-         fullDescription: `GreenSpace は、モダンでレスポンシブなデザインを採用しており、PC・タブレット・スマートフォンなど、どのデバイスでも快適に利用できます。リアルタイム検索機能を搭載しており、ユーザーは公園やイベントの情報を素早く見つけることができます。
-また、管理者向けに専用の管理ページを用意しており、直感的なUIを通じて、公園やイベントの追加・編集・削除が簡単に行えます。データベースを直接操作する必要がなく、非技術者でもスムーズに管理可能です。
-さらに、サイトのトラフィック、ユーザーのフィードバックや関心などの情報を可視化し、より効果的な運営ができるようになっています。アカウント管理機能も備えており、ユーザーや管理者の管理がしやすく、安全性の高いシステムを提供しています。`,
+         description: '公園施設とイベント情報を提供する総合ポータルサイトと管理システム',
+         fullDescription: `GreenSpaceは、あらゆるデバイスに最適化されたモダンなレスポンシブデザインを採用し、直感的な操作性を実現しています。リアルタイム検索機能により、ユーザーは必要な公園やイベント情報にスムーズにアクセスできます。管理者向けには、データベースの専門知識がなくても簡単に情報を管理できる専用システムを実装。さらに、アクセス解析やユーザーフィードバックの可視化機能により、効果的な運営をサポートします。堅牢なアカウント管理システムにより、安全性と使いやすさを両立させています。`,
          image: 'img/project-img/greenspace.jpg',
          gallery: [
             'img/project-img/greenspace1.png',
@@ -434,8 +436,8 @@ document.addEventListener('DOMContentLoaded', () => {
       },
       {
          title: 'DeepShinjuku',
-         description: '新宿周辺の怪談をまとめたサイト',
-         fullDescription: `「DEEP新宿 - 新宿怪談集」は、新宿区の怪談や心霊話に焦点を当てたサイトです。ここでは、新宿にまつわるさまざまな神秘的な民間伝承、都市伝説、怪談が集められ、都市の暗部の謎に隠された不思議な世界へと誘います。伝説や怪異話のどれもが、新宿特有の文化的な雰囲気を漂わせ、この場ならではの魂の癒しと本地の存在を感じさせます。DEEP新宿へようこそ、一緒に都市怪談の奥深くを探求しましょう。`,
+         description: '新宿の都市伝説と怪談を紐解く没入型ウェブ体験',
+         fullDescription: `「DEEP新宿 - 新宿怪談集」は、新宿区に伝わる不思議な物語と都市伝説を現代的な視点で紹介するウェブサイトです。長い歴史の中で織りなされてきた数々の怪談や都市伝説を通じて、新宿という街が持つ独特の文化的深層に迫ります。現代都市の喧騒の中に潜む神秘的な物語の数々が、訪れる人々を魅了する新しい新宿の一面を提示します。`,
          image: 'img/project-img/deepshinjuku.jpeg',
          gallery: [
             'img/project-img/deepshinjuku1.jpg',
@@ -479,8 +481,8 @@ document.addEventListener('DOMContentLoaded', () => {
       },
       {
          title: 'Artissite',
-         description: 'アーティストのオフィシャルサイト',
-         fullDescription: `アーティストのプロフィールや画像やSNS、次回のイベント情報などを掲載したオリジナルデザインのオフィシャルサイトです。`,
+         description: 'アーティストの創造世界を表現するクリエイティブポートフォリオ',
+         fullDescription: `アーティストの独創性と芸術世界を最大限に引き出すよう設計された、モダンでインタラクティブなポートフォリオサイトです。作品展示やプロフィール、SNSフィード、今後のイベント情報など、アーティストの活動を多角的に発信します。洗練されたアニメーションとレスポンシブデザインにより、デバイスを問わず没入感のある閲覧体験を提供します。`,
          image: 'img/project-img/artissite.jpg',
          gallery: [
             'img/project-img/artistsite1.jpg',
@@ -497,8 +499,8 @@ document.addEventListener('DOMContentLoaded', () => {
       },
       {
          title: 'Cocoonsite',
-         description: 'コクーンタワーのサイト',
-         fullDescription: `コクーンタワーについての設備やビルにある専門学校や大学などの情報を掲載したサイトです。シンプルなデザインで、コクーンタワーの情報をわかりやすく伝えることができます。`,
+         description: 'コクーンタワーの魅力を発信する総合情報サイト',
+         fullDescription: `コクーンタワーの施設情報、テナント情報、教育機関情報を一元化した総合情報ポータルです。洗練された直感的なデザインにより、求める情報へのアクセスを容易にしています。視覚的にわかりやすいアクセスマップと施設案内により、初めての来訪者でも迷うことなく目的地へ到着できるよう配慮されています。`,
          image: 'img/project-img/cocoonsite.jpg',
          gallery: [
             'img/project-img/cocoonsite1.jpg',
@@ -531,8 +533,8 @@ document.addEventListener('DOMContentLoaded', () => {
       },
       {
          title: 'MovieSite',
-         description: '映画のサイト',
-         fullDescription: `映画のサイトです。映画の情報を提供しています。映画を見れるストリーミングサービスの情報も提供しています。`,
+         description: '映画「Interstellar」の公式プロモーションサイト',
+         fullDescription: `映画「Interstellar」の魅力を伝える公式サイトです。作品概要、キャスト情報、レビューなど、映画の世界観を余すことなく紹介します。宇宙をモチーフにしたUIデザインにより、作品の壮大なスケールを視覚的に表現しています。`,
          image: 'img/project-img/moviesite.jpg',
          gallery: [
             'img/project-img/moviesite1.jpg',
@@ -549,9 +551,29 @@ document.addEventListener('DOMContentLoaded', () => {
          ]
       },
       {
+         title: 'BoulangerieSite',
+         description: '西新宿のベーカリーの魅力を伝えるブランドサイト',
+         fullDescription: `西新宿に位置するベーカリーの魅力を余すことなく伝えるウェブサイトです。こだわりの商品メニュー、店舗へのアクセス、最新ニュースなど、パン好きの心をくすぐる情報を丁寧に紹介しています。`,
+         image: 'img/project-img/boulangerie.jpg',
+         gallery: [
+            'img/project-img/boulangerie1.jpg',
+            'img/project-img/boulangerie2.jpg',
+            'img/project-img/boulangerie3.jpg',
+            'img/project-img/boulangerie4.jpg',
+         ],
+         tech: ['CSS', 'HTML'],
+         team: [
+            {
+               name: 'Le Ly Thanh Hai',
+               role: 'Frontend Developer',
+               responsibilities: 'All'
+            }
+         ]
+      },
+      {
          title: 'CafeSite',
-         description: '仮想のカフェサイト',
-         fullDescription: `仮想のカフェサイトです。カフェの情報を掲載しています。住所、メニュ、スタッフ、ロケーションなどの情報を掲載しています。`,
+         description: '架空のカフェを演出する雰囲気重視の情報サイト',
+         fullDescription: `架空のカフェの世界観を表現したウェブサイトです。カフェならではの温かみのある雰囲気をUIデザインで表現し、メニュー情報、アクセス情報、ニュースなど、実在するかのような臨場感のある情報を提供します。`,
          image: 'img/project-img/cafesite.png',
          gallery: [
             'img/project-img/cafesite1.jpg',
@@ -572,13 +594,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
    function renderProjects() {
       return `
-         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             ${projects.map((project, index) => `
                <div class="project-card bg-gray-800/30 backdrop-blur-md rounded-xl overflow-hidden border border-gray-700/30 
-                         cursor-pointer opacity-0 translate-y-4"
-                    style="transition-delay: ${index * 100}ms"
+                         cursor-pointer opacity-0 translate-y-4 w-full"
+                    data-show-delay="${index * 100}"
                     onclick="openProjectModal(${index})">
-                  <img src="${project.image}" alt="${project.title}" class="w-full h-48 object-cover">
+                  <img src="${project.image}" alt="${project.title}" class="w-full h-52 object-cover">
                   <div class="p-6">
                       <h3 class="text-xl text-white font-bold mb-2">${project.title}</h3>
                       <p class="text-gray-300 mb-4">${project.description}</p>
@@ -782,13 +804,16 @@ document.addEventListener('DOMContentLoaded', () => {
       const observer = new IntersectionObserver((entries) => {
          entries.forEach(entry => {
             if (entry.isIntersecting) {
-               entry.target.classList.add('show');
+               const delay = entry.target.dataset.showDelay;
+               setTimeout(() => {
+                  entry.target.classList.add('show');
+               }, delay);
                observer.unobserve(entry.target);
             }
          });
       }, {
-         threshold: 0.1,  // Kích hoạt khi 10% card hiển thị trong viewport
-         rootMargin: '50px'  // Kích hoạt sớm hơn một chút trước khi card vào viewport
+         threshold: 0.1,
+         rootMargin: '50px'
       });
 
       document.querySelectorAll('.project-card').forEach(card => {
@@ -852,7 +877,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Update modal structure with max-height and scrollable content
       modal.classList = "fixed inset-0 z-50 hidden flex items-center justify-center p-4";
       modal.innerHTML = `
-         <div class="absolute inset-0 bg-black/50" onclick="closeProjectModal()"></div>
+         <div class="absolute inset-0" onclick="closeProjectModal()"></div>
          <div class="bg-white/5 backdrop-blur-xl rounded-2xl w-full max-w-3xl mx-auto border border-white/10 shadow-2xl 
                      transform scale-0 opacity-0 transition-all duration-300 ease-out relative max-h-[90vh]">
             <div class="relative">
