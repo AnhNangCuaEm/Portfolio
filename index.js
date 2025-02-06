@@ -617,7 +617,7 @@ document.addEventListener('DOMContentLoaded', () => {
          <!-- Project Modal -->
          <div id="projectModal" class="fixed inset-0  z-50 hidden">
             <div class="container mx-auto min-h-full flex items-center justify-center py-8 px-4">
-               <div class="bg-white/5 backdrop-blur-xl rounded-2xl max-w-4xl mx-auto border border-white/10 shadow-2xl 
+               <div class="bg-white/5 backdrop-blur-xl rounded-3xl max-w-4xl mx-auto border border-white/10 shadow-2xl 
                            transform scale-0 opacity-0 transition-all duration-300 ease-out">
                   <div class="relative">
                      <button onclick="closeProjectModal()" 
@@ -627,7 +627,7 @@ document.addEventListener('DOMContentLoaded', () => {
                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
                         </svg>
                      </button>
-                     <div id="modalContent" class="p-8 bg-black/30 rounded-2xl border border-white/10 shadow-2xl">
+                     <div id="modalContent" class="p-8 bg-black/30 rounded-3xl border border-white/10 shadow-2xl">
                      </div>
                   </div>
                </div>
