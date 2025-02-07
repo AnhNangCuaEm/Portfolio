@@ -343,31 +343,31 @@ document.addEventListener('DOMContentLoaded', () => {
    // Content Renderers
    function renderInfo() {
       return `
-          <div class="w-fit p-4 animate-fade-in-up">
-              <div class="bg-white/5 backdrop-blur-xl rounded-2xl p-8 border border-white/10 shadow-2xl 
+          <div class="w-full p-2 sm:p-4 animate-fade-in-up">
+              <div class="bg-white/5 backdrop-blur-xl rounded-2xl p-4 sm:p-8 border border-white/10 shadow-2xl 
                           opacity-0 translate-y-4 animate-content">
-                  <div class="flex flex-col items-center gap-8">
-                      <div class="w-48 h-48 rounded-full overflow-hidden border-4 border-purple-500/30">
+                  <div class="flex flex-col items-center gap-6 sm:gap-8">
+                      <div class="w-32 h-32 sm:w-48 sm:h-48 rounded-full overflow-hidden border-4 border-purple-500/30">
                           <img src="img/avatar.png" alt="Profile" class="w-full h-full object-cover mt-2.5">
                       </div>
                       <div class="text-center">
-                          <h1 class="text-4xl font-bold text-white mb-2">Le Ly Thanh Hai</h1>
-                          <p class="text-purple-400 text-xl mb-4">フルスタック開発者志望</p>
-                          <p class="text-gray-300 max-w-2xl mx-auto">
+                          <h1 class="text-2xl sm:text-4xl font-bold text-white mb-2">Le Ly Thanh Hai</h1>
+                          <p class="text-lg sm:text-xl text-purple-400 mb-4">フルスタック開発者志望</p>
+                          <p class="text-sm sm:text-base text-gray-300 max-w-2xl mx-auto">
                               Web開発を学習中です。フロントエンドではHTML/CSS/JavaScript、バックエンドではPHP/MySQLを使用してプロジェクトを開発しています。
                               <br><br>
                               新しい技術に対する強い興味と、チーム開発への意欲を持っています。ユーザー目線のWeb開発を心がけ、価値あるサービスの創造を目指しています。
                           </p>
-                          <div class="flex justify-center space-x-4 mt-6">
+                          <div class="flex flex-wrap justify-center gap-4 mt-6">
                               <a href="https://github.com/AnhNangCuaEm" target="_blank" class="text-gray-300 hover:text-white">
-                                  <i class="fab fa-github text-2xl"></i>
+                                  <i class="fab fa-github text-xl sm:text-2xl"></i>
                               </a>
                               <a href="https://www.linkedin.com/in/haile1302/" target="_blank" class="text-gray-300 hover:text-white">
-                                  <i class="fab fa-linkedin text-2xl"></i>
+                                  <i class="fab fa-linkedin text-xl sm:text-2xl"></i>
                               </a>
                               <div class="flex items-center text-gray-300">
-                                  <i class="fas fa-envelope text-2xl mr-2"></i>
-                                  <span>thanhhailth1302@gmail.com</span>
+                                  <i class="fas fa-envelope text-xl sm:text-2xl mr-2"></i>
+                                  <span class="text-sm sm:text-base">thanhhailth1302@gmail.com</span>
                               </div>
                           </div>
                       </div>
