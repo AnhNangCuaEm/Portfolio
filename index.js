@@ -353,17 +353,63 @@ document.addEventListener('DOMContentLoaded', () => {
                       <div class="text-center">
                           <h1 class="text-2xl sm:text-4xl font-bold text-white mb-2">Le Ly Thanh Hai</h1>
                           <p class="text-lg sm:text-xl text-purple-400 mb-4">フルスタック開発者志望</p>
-                          <p class="text-sm sm:text-base text-gray-300 max-w-2xl mx-auto">
+                          
+                          <!-- Education -->
+                          <div class="mb-6">
+                              <h2 class="text-xl text-white font-semibold mb-2">Education</h2>
+                              <p class="text-gray-300">
+                                  HAL Tokyo - WEB学科
+                                  <span class="text-purple-400 block text-sm">2024 - 現在</span>
+                              </p>
+                          </div>
+
+                          <!-- About Me -->
+                          <p class="text-sm sm:text-base text-gray-300 max-w-2xl mx-auto mb-6">
                               Web開発を学習中です。フロントエンドではHTML/CSS/JavaScript、バックエンドではPHP/MySQLを使用してプロジェクトを開発しています。
+                              現在、ReactとNode.jsの学習に取り組んでおり、モダンな開発技術の習得に励んでいます。
                               <br><br>
                               新しい技術に対する強い興味と、チーム開発への意欲を持っています。ユーザー目線のWeb開発を心がけ、価値あるサービスの創造を目指しています。
                           </p>
+
+                          <!-- Interests -->
+                          <div class="mb-6">
+                              <h2 class="text-xl text-white font-semibold mb-3">Interests</h2>
+                              <div class="flex flex-wrap justify-center gap-3">
+                                  <span class="px-4 py-2 bg-white/5 rounded-full text-gray-300 border border-white/10">
+                                      <i class="fas fa-camera mr-2"></i>Photography
+                                  </span>
+                                  <span class="px-4 py-2 bg-white/5 rounded-full text-gray-300 border border-white/10">
+                                      <i class="fas fa-plane-departure mr-2"></i>Traveling
+                                  </span>
+                                  <span class="px-4 py-2 bg-white/5 rounded-full text-gray-300 border border-white/10">
+                                      <i class="fas fa-music mr-2"></i>Music
+                                  </span>
+                                  <span class="px-4 py-2 bg-white/5 rounded-full text-gray-300 border border-white/10">
+                                      <i class="fas fa-code mr-2"></i>Coding
+                                  </span>
+                              </div>
+                          </div>
+
+                          <!-- Current Learning -->
+                          <div class="mb-6">
+                              <h2 class="text-xl text-white font-semibold mb-3">Currently Learning</h2>
+                              <div class="flex flex-wrap justify-center gap-3">
+                                  <span class="px-4 py-2 bg-purple-500/20 rounded-full text-purple-300">React</span>
+                                  <span class="px-4 py-2 bg-purple-500/20 rounded-full text-purple-300">Node.js</span>
+                              </div>
+                          </div>
+
+                          <!-- Contact Links -->
                           <div class="flex flex-wrap justify-center gap-4 mt-6">
-                              <a href="https://github.com/AnhNangCuaEm" target="_blank" class="text-gray-300 hover:text-white">
+                              <a href="https://github.com/AnhNangCuaEm" target="_blank" 
+                                 class="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
                                   <i class="fab fa-github text-xl sm:text-2xl"></i>
+                                  <span>GitHub</span>
                               </a>
-                              <a href="https://www.linkedin.com/in/haile1302/" target="_blank" class="text-gray-300 hover:text-white">
+                              <a href="https://www.linkedin.com/in/haile1302/" target="_blank" 
+                                 class="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
                                   <i class="fab fa-linkedin text-xl sm:text-2xl"></i>
+                                  <span>LinkedIn</span>
                               </a>
                               <div class="flex items-center text-gray-300">
                                   <i class="fas fa-envelope text-xl sm:text-2xl mr-2"></i>
