@@ -945,13 +945,13 @@ document.addEventListener('DOMContentLoaded', () => {
          <div class="space-y-6 max-h-[calc(85vh-4rem)] overflow-y-auto rounded-xl">
             <!-- Image Gallery -->
             <div class="relative">
-                <div class="flex space-x-4 overflow-x-auto scrollbar-thin scrollbar-thumb-purple-500/30 scrollbar-track-white/5 rounded-xl">
+                <div class="flex space-x-4 overflow-x-auto rounded-xl">
                     <img src="${project.image}" alt="${project.title}" class="w-auto object-cover rounded-xl aspect-16/9">
                     ${project.gallery ? project.gallery.map(img => `
                         <img src="${img}" alt="${project.title}" class="w-auto object-cover rounded-xl aspect-16/9">
                     `).join('') : ''}
                 </div>
-                <div class="w-full text-center text-gray-400 text-sm mt-2">Swipe to see more</div>
+                <div class="w-full text-center text-white text-sm mt-2">Swipe to see more</div>
             </div>
 
             <!-- Rest of the content -->
