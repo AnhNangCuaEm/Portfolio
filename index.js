@@ -427,12 +427,12 @@ document.addEventListener('DOMContentLoaded', () => {
       const skills = [
          { name: 'HTML', level: 90 },
          { name: 'CSS', level: 90 },
-         { name: 'Tailwind CSS', level: 60 },
          { name: 'JavaScript', level: 80 },
          { name: 'PHP', level: 80 },
          { name: 'MySQL', level: 70 },
          { name: 'Git', level: 70 },
          { name: 'Figma', level: 70 },
+         { name: 'Tailwind CSS', level: 60 },
          { name: 'Adobe Photoshop', level: 60 },
          { name: 'Adobe Illustrator', level: 60 },
          { name: 'Adobe Premiere Pro', level: 60 },
@@ -463,7 +463,7 @@ document.addEventListener('DOMContentLoaded', () => {
       {
          title: 'GreenSpace',
          description: '公園施設とイベント情報を提供する総合ポータルサイトと管理システム',
-         fullDescription: `GreenSpaceは、あらゆるデバイスに最適化されたモダンなレスポンシブデザインを採用し、直感的な操作性を実現しています。リアルタイム検索機能により、ユーザーは必要な公園やイベント情報にスムーズにアクセスできます。管理者向けには、データベースの専門知識がなくても簡単に情報を管理できる専用システムを実装。さらに、アクセス解析やユーザーフィードバックの可視化機能により、効果的な運営をサポートします。堅牢なアカウント管理システムにより、安全性と使いやすさを両立させています。`,
+         fullDescription: `GreenSpaceは、あらゆるデバイスに最適化されたモダンなレスポンシブデザインを採用し、直感的な操作性を実現しています。リアルタイム検索機能により、ユーザーは必要な公園やイベント情報にスムーズにアクセスできます。管理者向けには、データベースの専門知識がなくても簡単に情報を管理できる専用システムを実装。さらに、アクセス解析やユーザーフィードバックの可視化機能により、効果的な運営をサポートします。堅牢なアカウント管理システムにより、安全性と使いやすさを両立させています。<br><br>※このサイトは、学習プロジェクトです。`,
          image: 'img/project-img/greenspace.jpg',
          gallery: [
             'img/project-img/greenspace1.png',
@@ -483,7 +483,7 @@ document.addEventListener('DOMContentLoaded', () => {
       {
          title: 'DeepShinjuku',
          description: '新宿の都市伝説と怪談を紐解く没入型ウェブ体験',
-         fullDescription: `「DEEP新宿 - 新宿怪談集」は、新宿区に伝わる不思議な物語と都市伝説を現代的な視点で紹介するウェブサイトです。長い歴史の中で織りなされてきた数々の怪談や都市伝説を通じて、新宿という街が持つ独特の文化的深層に迫ります。現代都市の喧騒の中に潜む神秘的な物語の数々が、訪れる人々を魅了する新しい新宿の一面を提示します。`,
+         fullDescription: `「DEEP新宿 - 新宿怪談集」は、新宿区に伝わる不思議な物語と都市伝説を現代的な視点で紹介するウェブサイトです。長い歴史の中で織りなされてきた数々の怪談や都市伝説を通じて、新宿という街が持つ独特の文化的深層に迫ります。現代都市の喧騒の中に潜む神秘的な物語の数々が、訪れる人々を魅了する新しい新宿の一面を提示します。<br><br>※このサイトは、学習プロジェクトです。`,
          image: 'img/project-img/deepshinjuku.jpeg',
          gallery: [
             'img/project-img/deepshinjuku1.jpg',
@@ -526,9 +526,29 @@ document.addEventListener('DOMContentLoaded', () => {
          ]
       },
       {
+         title: 'BoulangerieSite',
+         description: '西新宿のベーカリーの魅力を伝えるブランドサイト',
+         fullDescription: `西新宿に位置するベーカリーの魅力を余すことなく伝えるウェブサイトです。こだわりの商品メニュー、店舗へのアクセス、最新ニュースなど、パン好きの心をくすぐる情報を丁寧に紹介しています。<br><br>※このサイトは、学習プロジェクトです。`,
+         image: 'img/project-img/boulangerie.jpg',
+         gallery: [
+            'img/project-img/boulangerie1.jpg',
+            'img/project-img/boulangerie2.jpg',
+            'img/project-img/boulangerie3.jpg',
+            'img/project-img/boulangerie4.jpg',
+         ],
+         tech: ['JavaScript', 'Tailwind CSS', 'HTML'],
+         team: [
+            {
+               name: 'Le Ly Thanh Hai',
+               role: 'Frontend Developer',
+               responsibilities: 'All'
+            }
+         ]
+      },
+      {
          title: 'Artissite',
          description: 'アーティストの創造世界を表現するクリエイティブポートフォリオ',
-         fullDescription: `アーティストの独創性と芸術世界を最大限に引き出すよう設計された、モダンでインタラクティブなポートフォリオサイトです。作品展示やプロフィール、SNSフィード、今後のイベント情報など、アーティストの活動を多角的に発信します。洗練されたアニメーションとレスポンシブデザインにより、デバイスを問わず没入感のある閲覧体験を提供します。`,
+         fullDescription: `アーティストの独創性と芸術世界を最大限に引き出すよう設計された、モダンでインタラクティブなポートフォリオサイトです。作品展示やプロフィール、SNSフィード、今後のイベント情報など、アーティストの活動を多角的に発信します。洗練されたアニメーションとレスポンシブデザインにより、デバイスを問わず没入感のある閲覧体験を提供します。<br><br>※このサイトは、学習プロジェクトです。`,
          image: 'img/project-img/artissite.jpg',
          gallery: [
             'img/project-img/artistsite1.jpg',
@@ -546,7 +566,7 @@ document.addEventListener('DOMContentLoaded', () => {
       {
          title: 'Cocoonsite',
          description: 'コクーンタワーの魅力を発信する総合情報サイト',
-         fullDescription: `コクーンタワーの施設情報、テナント情報、教育機関情報を一元化した総合情報ポータルです。洗練された直感的なデザインにより、求める情報へのアクセスを容易にしています。視覚的にわかりやすいアクセスマップと施設案内により、初めての来訪者でも迷うことなく目的地へ到着できるよう配慮されています。`,
+         fullDescription: `コクーンタワーの施設情報、テナント情報、教育機関情報を一元化した総合情報ポータルです。洗練された直感的なデザインにより、求める情報へのアクセスを容易にしています。視覚的にわかりやすいアクセスマップと施設案内により、初めての来訪者でも迷うことなく目的地へ到着できるよう配慮されています。<br><br>※このサイトは、学習プロジェクトです。`,
          image: 'img/project-img/cocoonsite.jpg',
          gallery: [
             'img/project-img/cocoonsite1.jpg',
@@ -580,7 +600,7 @@ document.addEventListener('DOMContentLoaded', () => {
       {
          title: 'MovieSite',
          description: '映画「Interstellar」の公式プロモーションサイト',
-         fullDescription: `映画「Interstellar」の魅力を伝える公式サイトです。作品概要、キャスト情報、レビューなど、映画の世界観を余すことなく紹介します。宇宙をモチーフにしたUIデザインにより、作品の壮大なスケールを視覚的に表現しています。`,
+         fullDescription: `映画「Interstellar」の魅力を伝える公式サイトです。作品概要、キャスト情報、レビューなど、映画の世界観を余すことなく紹介します。宇宙をモチーフにしたUIデザインにより、作品の壮大なスケールを視覚的に表現しています。<br><br>※このサイトは、学習プロジェクトです。`,
          image: 'img/project-img/moviesite.jpg',
          gallery: [
             'img/project-img/moviesite1.jpg',
@@ -597,29 +617,9 @@ document.addEventListener('DOMContentLoaded', () => {
          ]
       },
       {
-         title: 'BoulangerieSite',
-         description: '西新宿のベーカリーの魅力を伝えるブランドサイト',
-         fullDescription: `西新宿に位置するベーカリーの魅力を余すことなく伝えるウェブサイトです。こだわりの商品メニュー、店舗へのアクセス、最新ニュースなど、パン好きの心をくすぐる情報を丁寧に紹介しています。`,
-         image: 'img/project-img/boulangerie.jpg',
-         gallery: [
-            'img/project-img/boulangerie1.jpg',
-            'img/project-img/boulangerie2.jpg',
-            'img/project-img/boulangerie3.jpg',
-            'img/project-img/boulangerie4.jpg',
-         ],
-         tech: ['CSS', 'HTML'],
-         team: [
-            {
-               name: 'Le Ly Thanh Hai',
-               role: 'Frontend Developer',
-               responsibilities: 'All'
-            }
-         ]
-      },
-      {
          title: 'CafeSite',
          description: '架空のカフェを演出する雰囲気重視の情報サイト',
-         fullDescription: `架空のカフェの世界観を表現したウェブサイトです。カフェならではの温かみのある雰囲気をUIデザインで表現し、メニュー情報、アクセス情報、ニュースなど、実在するかのような臨場感のある情報を提供します。`,
+         fullDescription: `架空のカフェの世界観を表現したウェブサイトです。カフェならではの温かみのある雰囲気をUIデザインで表現し、メニュー情報、アクセス情報、ニュースなど、実在するかのような臨場感のある情報を提供します。<br><br>※このサイトは、学習プロジェクトです。`,
          image: 'img/project-img/cafesite.png',
          gallery: [
             'img/project-img/cafesite1.jpg',
