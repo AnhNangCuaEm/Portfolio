@@ -463,7 +463,7 @@ document.addEventListener('DOMContentLoaded', () => {
       {
          title: 'GreenSpace',
          description: '公園施設とイベント情報を提供する総合ポータルサイトと管理システム',
-         fullDescription: `GreenSpaceは、あらゆるデバイスに最適化されたモダンなレスポンシブデザインを採用し、直感的な操作性を実現しています。リアルタイム検索機能により、ユーザーは必要な公園やイベント情報にスムーズにアクセスできます。管理者向けには、データベースの専門知識がなくても簡単に情報を管理できる専用システムを実装。さらに、アクセス解析やユーザーフィードバックの可視化機能により、効果的な運営をサポートします。堅牢なアカウント管理システムにより、安全性と使いやすさを両立させています。<br><br>※このサイトは、学習プロジェクトです。`,
+         fullDescription: `GreenSpaceは、あらゆるデバイスに最適化されたモダンなレスポンシブデザインを採用し、直感的な操作性を実現しています。リアルタイム検索機能により、ユーザーは必要な公園やイベント情報にスムーズにアクセスできます。管理者向けには、データベースの専門知識がなくても簡単に情報を管理できる専用システムを実装。さらに、アクセス解析やユーザーフィードバックの可視化機能により、効果的な運営をサポートします。堅牢なアカウント管理システムにより、安全性と使いやすさを両立させています。<br><br>Github: <a href="https://github.com/AnhNangCuaEm/GREENSPACE" style="color: purple;">https://github.com/AnhNangCuaEm/GREENSPACE</a><br><br>※このサイトは、学習プロジェクトです。`,
          image: 'img/project-img/greenspace.jpg',
          gallery: [
             'img/project-img/greenspace1.png',
@@ -483,7 +483,7 @@ document.addEventListener('DOMContentLoaded', () => {
       {
          title: 'DeepShinjuku',
          description: '新宿の都市伝説と怪談を紐解く没入型ウェブ体験',
-         fullDescription: `「DEEP新宿 - 新宿怪談集」は、新宿区に伝わる不思議な物語と都市伝説を現代的な視点で紹介するウェブサイトです。長い歴史の中で織りなされてきた数々の怪談や都市伝説を通じて、新宿という街が持つ独特の文化的深層に迫ります。現代都市の喧騒の中に潜む神秘的な物語の数々が、訪れる人々を魅了する新しい新宿の一面を提示します。<br><br>※このサイトは、学習プロジェクトです。`,
+         fullDescription: `「DEEP新宿 - 新宿怪談集」は、新宿区に伝わる不思議な物語と都市伝説を現代的な視点で紹介するウェブサイトです。長い歴史の中で織りなされてきた数々の怪談や都市伝説を通じて、新宿という街が持つ独特の文化的深層に迫ります。現代都市の喧騒の中に潜む神秘的な物語の数々が、訪れる人々を魅了する新しい新宿の一面を提示します。<br><br>Github: <a href="https://github.com/AnhNangCuaEm/Deep-Shinjuku" style="color:purple;">https://github.com/AnhNangCuaEm/Deep-Shinjuku</a><br><br>※このサイトは、学習プロジェクトです。`,
          image: 'img/project-img/deepshinjuku.jpeg',
          gallery: [
             'img/project-img/deepshinjuku1.jpg',
@@ -528,7 +528,7 @@ document.addEventListener('DOMContentLoaded', () => {
       {
          title: 'BoulangerieSite',
          description: '西新宿のベーカリーの魅力を伝えるブランドサイト',
-         fullDescription: `西新宿に位置するベーカリーの魅力を余すことなく伝えるウェブサイトです。こだわりの商品メニュー、店舗へのアクセス、最新ニュースなど、パン好きの心をくすぐる情報を丁寧に紹介しています。<br><br>※このサイトは、学習プロジェクトです。`,
+         fullDescription: `西新宿に位置するベーカリーの魅力を余すことなく伝えるウェブサイトです。こだわりの商品メニュー、店舗へのアクセス、最新ニュースなど、パン好きの心をくすぐる情報を丁寧に紹介しています。<br><br>Github: <a href="https://github.com/AnhNangCuaEm/Boulangerie" style="color:purple;">https://github.com/AnhNangCuaEm/Boulangerie</a><br><br>※このサイトは、学習プロジェクトです。`,
          image: 'img/project-img/boulangerie.jpg',
          gallery: [
             'img/project-img/boulangerie1.jpg',
