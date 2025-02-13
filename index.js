@@ -957,7 +957,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <!-- Rest of the content -->
             <div>
                 <h2 class="text-3xl font-bold text-white mb-4">${project.title}</h2>
-                <p class="text-gray-300 mb-6">${project.fullDescription || project.description}</p>
+                <p class="text-gray-300 mb-6 text-warp">${project.fullDescription || project.description}</p>
 
                 <!-- Technologies -->
                 <h3 class="text-xl font-bold text-white mb-3">Technologies Used</h3>
