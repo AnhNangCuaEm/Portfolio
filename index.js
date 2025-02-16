@@ -352,7 +352,7 @@ document.addEventListener('DOMContentLoaded', () => {
                       </div>
                       <div class="text-center">
                           <h1 class="text-2xl sm:text-4xl font-bold text-white mb-2">Le Ly Thanh Hai</h1>
-                          <p class="text-lg sm:text-xl text-purple-400 mb-4">フルスタック開発者志望</p>
+                          <p class="text-lg sm:text-xl text-purple-400 mb-4">Full Stack Developer</p>
                           
                           <!-- Education -->
                           <div class="mb-6">
@@ -394,7 +394,7 @@ document.addEventListener('DOMContentLoaded', () => {
                           <div class="mb-6">
                               <h2 class="text-xl text-white font-semibold mb-3">Currently Learning</h2>
                               <div class="flex flex-wrap justify-center gap-3">
-                                  <span class="px-4 py-2 bg-purple-500/20 rounded-full text-purple-300">React</span>
+                                  <span class="px-4 py-2 bg-purple-500/20 rounded-full text-purple-300">Nextjs</span>
                                   <span class="px-4 py-2 bg-purple-500/20 rounded-full text-purple-300">Node.js</span>
                               </div>
                           </div>
