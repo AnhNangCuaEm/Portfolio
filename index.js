@@ -352,6 +352,7 @@ document.addEventListener('DOMContentLoaded', () => {
                       </div>
                       <div class="text-center">
                           <h1 class="text-2xl sm:text-4xl font-bold text-white mb-2">Le Ly Thanh Hai</h1>
+                          <h2 class="text-xl sm:text-2xl font-bold text-white mb-2">レリタン ハイ</h2>
                           <p class="text-lg sm:text-xl text-purple-400 mb-4">Full Stack Developer</p>
                           
                           <!-- Education -->
