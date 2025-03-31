@@ -3,22 +3,22 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuItems = [
     {
       id: "info",
-      icon: '<img src="img/svg/human.svg" alt="Info" class="w-7 h-7" />',
+      icon: '<img src="img/svg/human.svg" alt="Info icon" class="w-7 h-7" />',
       label: "Info",
     },
     {
       id: "skills",
-      icon: '<img src="img/svg/skill.svg" alt="Skills" class="w-7 h-7" />',
+      icon: '<img src="img/svg/skill.svg" alt="Skills Icon" class="w-7 h-7" />',
       label: "Skills",
     },
     {
       id: "projects",
-      icon: '<img src="img/svg/rocket.svg" alt="Projects" class="w-7 h-7" />',
+      icon: '<img src="img/svg/rocket.svg" alt="Projects Icon" class="w-7 h-7" />',
       label: "Projects",
     },
     {
       id: "contact",
-      icon: '<img src="img/svg/mail.svg" alt="Contact" class="w-7 h-7" />',
+      icon: '<img src="img/svg/mail.svg" alt="Contact Icon" class="w-7 h-7" />',
       label: "Contact",
     },
   ];
@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Content Area
   const contentArea = `
-        <div id="content" class="flex-1 p-6 max-w-7xl lg:ml-64">
+        <div id="content" class="flex-1 lg:ml-64">
             ${renderInfo()} <!-- Default content -->
         </div>
     `;
@@ -495,7 +495,7 @@ document.addEventListener("DOMContentLoaded", () => {
       title: "MusicPlayer",
       description: "オンラインで音楽を楽しむためのWebアプリケーション",
       fullDescription:
-        'MusicPlayerは、オンライン音楽プレイヤーの機能を提供するWebアプリケーションです。再生、シャッフル、次へ、前へ、リピートなどの基本的な操作をサポートしています。プレイリストから曲をクリックするとその曲を再生できます。また、歌詞の表示機能がありリアルタイム歌ってるところをハイライトされています。<br><br>サイトのリンク先:<a href="https://anhnangcuaem.github.io/MusicPlayer/"><button class="link-btn">こちら</button></a><br><br>Github: <a href="https://github.com/AnhNangCuaEm/MusicPlayer"><button class="link-btn">こちら</button></a>',
+        'MusicPlayerは、オンライン音楽プレイヤーの機能を提供するWebアプリケーションです。再生、シャッフル、次へ、前へ、リピートなどの基本的な操作をサポートしています。プレイリストから曲をクリックするとその曲を再生できます。また、歌詞の表示機能がありリアルタイム歌ってるところをハイライトされています。<br><br>サイトのリンク先:<a href="https://musicplayer.anhnangcuaem.com"><button class="link-btn">こちら</button></a><br><br>Github: <a href="https://github.com/AnhNangCuaEm/MusicPlayer"><button class="link-btn">こちら</button></a>',
       image:
         "img/project-img/musicplayer/Screenshot 2025-03-10 at 10.50.03 PM.png",
       gallery: [
@@ -536,7 +536,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       title: "DeepShinjuku",
       description: "新宿の都市伝説と怪談を紐解く没入型ウェブ体験",
-      fullDescription: `「DEEP新宿 - 新宿怪談集」は、新宿区に伝わる不思議な物語と都市伝説を現代的な視点で紹介するウェブサイトです。長い歴史の中で織りなされてきた数々の怪談や都市伝説を通じて、新宿という街が持つ独特の文化的深層に迫ります。現代都市の喧騒の中に潜む神秘的な物語の数々が、訪れる人々を魅了する新しい新宿の一面を提示します。<br><br>Github: <a href="https://github.com/AnhNangCuaEm/Deep-Shinjuku"><button class="link-btn">こちら</button></a><br><br>※このサイトは、学習プロジェクトです。`,
+      fullDescription: `「DEEP新宿 - 新宿怪談集」は、新宿区に伝わる不思議な物語と都市伝説を現代的な視点で紹介するウェブサイトです。長い歴史の中で織りなされてきた数々の怪談や都市伝説を通じて、新宿という街が持つ独特の文化的深層に迫ります。現代都市の喧騒の中に潜む神秘的な物語の数々が、訪れる人々を魅了する新しい新宿の一面を提示します。<br><br>サイトのリンク先:<a href="https://deepshinjuku.anhnangcuaem.com"><button class="link-btn">こちら</button></a><br><br>Github: <a href="https://github.com/AnhNangCuaEm/Deep-Shinjuku"><button class="link-btn">こちら</button></a><br><br>※このサイトは、学習プロジェクトです。`,
       image: "img/project-img/deepshinjuku/deepshinjuku.jpeg",
       gallery: [
         "img/project-img/deepshinjuku/deepshinjuku1.jpg",
@@ -581,7 +581,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       title: "BoulangerieSite",
       description: "西新宿のベーカリーの魅力を伝えるブランドサイト",
-      fullDescription: `西新宿に位置するベーカリーの魅力を余すことなく伝えるウェブサイトです。こだわりの商品メニュー、店舗へのアクセス、最新ニュースなど、パン好きの心をくすぐる情報を丁寧に紹介しています。<br><br>Github: <a href="https://github.com/AnhNangCuaEm/Boulangerie"><button class="link-btn">こちら</button></a><br><br>※このサイトは、学習プロジェクトです。`,
+      fullDescription: `西新宿に位置するベーカリーの魅力を余すことなく伝えるウェブサイトです。こだわりの商品メニュー、店舗へのアクセス、最新ニュースなど、パン好きの心をくすぐる情報を丁寧に紹介しています。<br><br>サイトのリンク先:<a href="https://boulangerie.anhnangcuaem.com"><button class="link-btn">こちら</button></a><br><br>Github: <a href="https://github.com/AnhNangCuaEm/Boulangerie"><button class="link-btn">こちら</button></a><br><br>※このサイトは、学習プロジェクトです。`,
       image: "img/project-img/boulangerie/boulangerie.jpg",
       gallery: [
         "img/project-img/boulangerie/boulangerie1.jpg",
@@ -698,19 +698,19 @@ document.addEventListener("DOMContentLoaded", () => {
            ${projects
              .map(
                (project, index) => `
-              <div class="project-card bg-gray-800/30 backdrop-blur-md rounded-xl overflow-hidden border border-gray-700/30 
+              <div class="project-card bg-gray-800/30 backdrop-blur-md rounded-2xl overflow-hidden border border-gray-700/30 
                         cursor-pointer opacity-0 translate-y-4 w-full relative h-80"
                    data-show-delay="${index * 100}"
                    onclick="openProjectModal(${index})">
                  <img src="${project.image}" alt="${project.title}" class="w-full h-full object-cover">
                  <div class="absolute inset-0 bg-black/45 backdrop-blur-[2px] p-6 flex flex-col justify-end">
-                     <h3 class="text-2xl text-white font-bold mb-2">${project.title}</h3>
+                     <p class="text-2xl text-white font-bold mb-2">${project.title}</p>
                      <p class="text-gray-300 mb-4">${project.description}</p>
                      <div class="flex flex-wrap gap-2">
                          ${project.tech
                            .map(
                              (t) => `
-                             <span class="px-3 py-1 bg-purple-500/50 text-purple-300 rounded-full text-sm">${t}</span>
+                             <span class="px-3 py-1 bg-purple-800/70 text-purple-300 rounded-full text-sm">${t}</span>
                          `
                            )
                            .join("")}
@@ -754,7 +754,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         <div>
                             <input type="text" 
                                 name="from_name"
-                                placeholder="Name" 
+                                placeholder="Your Name" 
                                 required
                                 class="w-full bg-gray-900/50 border border-gray-700/30 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-purple-500">
                         </div>
@@ -1039,12 +1039,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 }</p>
 
                 <!-- Technologies -->
-                <h3 class="text-xl font-bold text-white mb-3">Technologies Used</h3>
+                <h4 class="text-xl font-bold text-white mb-3">Technologies Used</h4>
                 <div class="flex flex-wrap gap-2 mb-6">
                     ${project.tech
                       .map(
                         (t) => `
-                        <span class="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full border border-purple-500/30">${t}</span>
+                        <span class="px-3 py-1 bg-purple-800/70 text-purple-300 rounded-full border border-purple-500/30">${t}</span>
                     `
                       )
                       .join("")}
