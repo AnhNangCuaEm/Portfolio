@@ -1,17 +1,34 @@
-document.addEventListener('DOMContentLoaded', () => {
-   // Data
-   const menuItems = [
-      { id: 'info', icon: '<img src="img/svg/human.svg" alt="Info" class="w-7 h-7" />', label: 'Info' },
-      { id: 'skills', icon: '<img src="img/svg/skill.svg" alt="Skills" class="w-7 h-7" />', label: 'Skills' },
-      { id: 'projects', icon: '<img src="img/svg/rocket.svg" alt="Projects" class="w-7 h-7" />', label: 'Projects' },
-      { id: 'contact', icon: '<img src="img/svg/mail.svg" alt="Contact" class="w-7 h-7" />', label: 'Contact' }
-   ];
+document.addEventListener("DOMContentLoaded", () => {
+  // Data
+  const menuItems = [
+    {
+      id: "info",
+      icon: '<img src="img/svg/human.svg" alt="Info" class="w-7 h-7" />',
+      label: "Info",
+    },
+    {
+      id: "skills",
+      icon: '<img src="img/svg/skill.svg" alt="Skills" class="w-7 h-7" />',
+      label: "Skills",
+    },
+    {
+      id: "projects",
+      icon: '<img src="img/svg/rocket.svg" alt="Projects" class="w-7 h-7" />',
+      label: "Projects",
+    },
+    {
+      id: "contact",
+      icon: '<img src="img/svg/mail.svg" alt="Contact" class="w-7 h-7" />',
+      label: "Contact",
+    },
+  ];
 
-   // Main layout
-   document.body.className = 'bg-gradient-to-br from-purple-900 to-black min-h-screen flex items-center justify-center p-4';
+  // Main layout
+  document.body.className =
+    "bg-gradient-to-br from-purple-900 to-black min-h-screen flex items-center justify-center p-4";
 
-   // Side Menu
-   const sideMenu = `
+  // Side Menu
+  const sideMenu = `
         <div class="relative">
             <!-- Main menu container -->
             <div id="sideMenu" class="fixed left-4 top-1/2 -translate-y-1/2 h-fit w-64 bg-white/5 rounded-2xl backdrop-blur-xl border border-white/10 p-6 
@@ -20,16 +37,20 @@ document.addEventListener('DOMContentLoaded', () => {
                     <h1 class="text-white text-2xl font-bold mb-4">Portfolio</h1>
                 </div>
                 <nav class="space-y-4">
-                    ${menuItems.map(item => `
+                    ${menuItems
+                      .map(
+                        (item) => `
                         <button 
                             data-section="${item.id}"
                             class="menu-item w-full text-center text-gray-300 hover:bg-white/10 p-4 rounded-xl transition-all flex flex-col items-center space-y-2
-                                   ${item.id === 'info' ? 'bg-white/10' : ''}"
+                                   ${item.id === "info" ? "bg-white/10" : ""}"
                         >
                             <span class="text-2xl">${item.icon}</span>
                             <span>${item.label}</span>
                         </button>
-                    `).join('')}
+                    `
+                      )
+                      .join("")}
                 </nav>
             </div>
         </div>
@@ -41,23 +62,23 @@ document.addEventListener('DOMContentLoaded', () => {
         </button>
     `;
 
-   // Content Area
-   const contentArea = `
+  // Content Area
+  const contentArea = `
         <div id="content" class="flex-1 p-6 max-w-7xl lg:ml-64">
             ${renderInfo()} <!-- Default content -->
         </div>
     `;
 
-   // Combine layouts
-   document.body.innerHTML = `
+  // Combine layouts
+  document.body.innerHTML = `
         ${sideMenu}
         <div class="flex flex-col w-full max-w-7xl mx-auto">
             ${contentArea}
         </div>
     `;
 
-   const style = document.createElement('style');
-   style.textContent = `
+  const style = document.createElement("style");
+  style.textContent = `
       @keyframes fadeInUp {
          from {
             opacity: 0;
@@ -176,6 +197,14 @@ document.addEventListener('DOMContentLoaded', () => {
          transform: rotate(-45deg);
          background-color: transparent;
       }
+
+      .link-btn {
+         background-color: rgb(143 143 143 / 50%);
+         color: white;
+         border: none;
+         padding: 8px 10px;
+         margin-left: 7px;
+         border-radius: 14px;}
 
       @keyframes rotate-circle {
          0% {
@@ -316,11 +345,10 @@ document.addEventListener('DOMContentLoaded', () => {
          }
       }
    `;
-   document.head.appendChild(style);
+  document.head.appendChild(style);
 
-   // Add this after your existing style element
-   const scrollStyle = document.createElement('style');
-   scrollStyle.textContent = `
+  const scrollStyle = document.createElement("style");
+  scrollStyle.textContent = `
       .project-card {
          opacity: 0;
          transform: translateY(20px);
@@ -338,11 +366,11 @@ document.addEventListener('DOMContentLoaded', () => {
          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
       }
    `;
-   document.head.appendChild(scrollStyle);
+  document.head.appendChild(scrollStyle);
 
-   // Content Renderers
-   function renderInfo() {
-      return `
+  // Content Renderers
+  function renderInfo() {
+    return `
           <div class="w-full p-2 sm:p-4 animate-fade-in-up">
               <div class="bg-white/5 backdrop-blur-xl rounded-2xl p-4 sm:p-8 border border-white/10 shadow-2xl 
                           opacity-0 translate-y-4 animate-content">
@@ -422,28 +450,29 @@ document.addEventListener('DOMContentLoaded', () => {
               </div>
           </div>
       `;
-   }
+  }
 
-   function renderSkills() {
-      const skills = [
-         { name: 'HTML', level: 90 },
-         { name: 'CSS', level: 90 },
-         { name: 'JavaScript', level: 80 },
-         { name: 'PHP', level: 80 },
-         { name: 'MySQL', level: 70 },
-         { name: 'Git', level: 70 },
-         { name: 'Figma', level: 70 },
-         { name: 'Tailwind CSS', level: 60 },
-         { name: 'Adobe Photoshop', level: 60 },
-         { name: 'Adobe Illustrator', level: 60 },
-         { name: 'Adobe Premiere Pro', level: 60 },
+  function renderSkills() {
+    const skills = [
+      { name: "HTML", level: 90 },
+      { name: "CSS", level: 90 },
+      { name: "JavaScript", level: 80 },
+      { name: "PHP", level: 80 },
+      { name: "MySQL", level: 70 },
+      { name: "Git", level: 70 },
+      { name: "Figma", level: 70 },
+      { name: "Tailwind CSS", level: 60 },
+      { name: "Adobe Photoshop", level: 60 },
+      { name: "Adobe Illustrator", level: 60 },
+      { name: "Adobe Premiere Pro", level: 60 },
+    ];
 
-      ];
-
-      return `
+    return `
             <div class="w-full">
                 <div class="grid md:grid-cols-2 gap-6">
-                    ${skills.map(skill => `
+                    ${skills
+                      .map(
+                        (skill) => `
                         <div class="bg-white/5 backdrop-blur-xl rounded-xl p-6 border border-white/10 shadow-lg">
                             <div class="flex justify-between mb-2">
                                 <span class="text-white">${skill.name}</span>
@@ -453,256 +482,270 @@ document.addEventListener('DOMContentLoaded', () => {
                                 <div class="bg-purple-500 h-2.5 rounded-full skill-bar" style="width: 0%"></div>
                             </div>
                         </div>
-                    `).join('')}
+                    `
+                      )
+                      .join("")}
                 </div>
             </div>
         `;
-   }
+  }
 
-   const projects = [
-      {
-         title: 'MusicPlayer',
-         description: 'オンラインで音楽を楽しむためのWebアプリケーション',
-         fullDescription: 'MusicPlayerは、オンライン音楽プレイヤーの機能を提供するWebアプリケーションです。再生、シャッフル、次へ、前へ、リピートなどの基本的な操作をサポートしています。プレイリストから曲をクリックするとその曲を再生できます。また、歌詞の表示機能がありリアルタイム歌ってるところをハイライトされています。<br><br>サイトのリンク先:<a href="https://anhnangcuaem.github.io/MusicPlayer/" style="color: blue;">こちら</a><br><br>Github: <a href="https://github.com/AnhNangCuaEm/MusicPlayer" style="color: blue;">こちら</a>',
-         image: 'img/project-img/musicplayer/Screenshot 2025-03-10 at 10.50.03 PM.png',
-         gallery: [
-            'img/project-img/musicplayer/Screenshot 2025-03-10 at 10.42.51 PM.png',
-            'img/project-img/musicplayer/Screenshot 2025-03-10 at 10.43.07 PM.png',
-            'img/project-img/musicplayer/Screenshot 2025-03-10 at 10.43.25 PM.png',
-         ],
-         tech: ['JavaScript', 'HTML', 'CSS'],
-         team: [
-            {
-               name: 'Le Ly Thanh Hai',
-               role: 'Frontend Developer',
-               responsibilities: 'All'
-            }
-         ]
-      },
-      {
-         title: 'GreenSpace',
-         description: '公園施設とイベント情報を提供する総合ポータルサイトと管理システム',
-         fullDescription: `GreenSpaceは、あらゆるデバイスに最適化されたモダンなレスポンシブデザインを採用し、直感的な操作性を実現しています。リアルタイム検索機能により、ユーザーは必要な公園やイベント情報にスムーズにアクセスできます。管理者向けには、データベースの専門知識がなくても簡単に情報を管理できる専用システムを実装。さらに、アクセス解析やユーザーフィードバックの可視化機能により、効果的な運営をサポートします。堅牢なアカウント管理システムにより、安全性と使いやすさを両立させています。<br><br>Github:<a href="https://github.com/AnhNangCuaEm/GREENSPACE" style="color: blue;">こちら</a><br><br>※このサイトは、学習プロジェクトです。`,
-         image: 'img/project-img/greenspace/greenspace.jpg',
-         gallery: [
-            'img/project-img/greenspace/greenspace1.png',
-            'img/project-img/greenspace/greenspace2.jpg',
-            'img/project-img/greenspace/greenspace3.jpg',
-            'img/project-img/greenspace/greenspace4.jpg',
-         ],
-         tech: ['PHP', 'JavaScript', 'MySQL', 'CSS', 'HTML'],
-         team: [
-            {
-               name: 'Le Ly Thanh Hai',
-               role: 'Full Stack Developer',
-               responsibilities: 'All'
-            }
-         ]
-      },
-      {
-         title: 'DeepShinjuku',
-         description: '新宿の都市伝説と怪談を紐解く没入型ウェブ体験',
-         fullDescription: `「DEEP新宿 - 新宿怪談集」は、新宿区に伝わる不思議な物語と都市伝説を現代的な視点で紹介するウェブサイトです。長い歴史の中で織りなされてきた数々の怪談や都市伝説を通じて、新宿という街が持つ独特の文化的深層に迫ります。現代都市の喧騒の中に潜む神秘的な物語の数々が、訪れる人々を魅了する新しい新宿の一面を提示します。<br><br>Github: <a href="https://github.com/AnhNangCuaEm/Deep-Shinjuku" style="color: blue;">こちら</a><br><br>※このサイトは、学習プロジェクトです。`,
-         image: 'img/project-img/deepshinjuku/deepshinjuku.jpeg',
-         gallery: [
-            'img/project-img/deepshinjuku/deepshinjuku1.jpg',
-            'img/project-img/deepshinjuku/deepshinjuku2.jpg',
-            'img/project-img/deepshinjuku/deepshinjuku3.png',
-            'img/project-img/deepshinjuku/deepshinjuku4.jpg',
-         ],
-         tech: ['PHP', 'JavaScript', 'CSS', 'HTML'],
-         team: [
-            {
-               name: 'Le Ly Thanh Hai',
-               role: 'Backend Developer',
-               responsibilities: 'Like and Comment Function, ...'
-            },
-            {
-               name: 'LIUCHIAWEI',
-               role: 'Frontend Developer',
-               responsibilities: 'Index Page, Animation, ...'
-            },
-            {
-               name: '李森',
-               role: 'UI/UX Designer',
-               responsibilities: 'UI/UX Design, ...'
-            },
-            {
-               name: 'KAUNGTHAR',
-               role: 'Photographer',
-               responsibilities: 'Photo, Presentation, ...'
-            },
-            {
-               name: '鍾嘉朗',
-               role: 'Frontend Developer',
-               responsibilities: 'Intro Page, ...'
-            },
-            {
-               name: '若林真緒',
-               role: 'Planner',
-               responsibilities: 'Plan, ...'
-            }
-         ]
-      },
-      {
-         title: 'BoulangerieSite',
-         description: '西新宿のベーカリーの魅力を伝えるブランドサイト',
-         fullDescription: `西新宿に位置するベーカリーの魅力を余すことなく伝えるウェブサイトです。こだわりの商品メニュー、店舗へのアクセス、最新ニュースなど、パン好きの心をくすぐる情報を丁寧に紹介しています。<br><br>Github: <a href="https://github.com/AnhNangCuaEm/Boulangerie" style="color:blue;">こちら</a><br><br>※このサイトは、学習プロジェクトです。`,
-         image: 'img/project-img/boulangerie/boulangerie.jpg',
-         gallery: [
-            'img/project-img/boulangerie/boulangerie1.jpg',
-            'img/project-img/boulangerie/boulangerie2.jpg',
-            'img/project-img/boulangerie/boulangerie3.jpg',
-            'img/project-img/boulangerie/boulangerie4.jpg',
-         ],
-         tech: ['JavaScript', 'Tailwind CSS', 'HTML'],
-         team: [
-            {
-               name: 'Le Ly Thanh Hai',
-               role: 'Frontend Developer',
-               responsibilities: 'All'
-            }
-         ]
-      },
-      {
-         title: 'Artissite',
-         description: 'アーティストの創造世界を表現するクリエイティブポートフォリオ',
-         fullDescription: `アーティストの独創性と芸術世界を最大限に引き出すよう設計された、モダンでインタラクティブなポートフォリオサイトです。作品展示やプロフィール、SNSフィード、今後のイベント情報など、アーティストの活動を多角的に発信します。洗練されたアニメーションとレスポンシブデザインにより、デバイスを問わず没入感のある閲覧体験を提供します。<br><br>※このサイトは、学習プロジェクトです。`,
-         image: 'img/project-img/artistsite/artissite.jpg',
-         gallery: [
-            'img/project-img/artistsite/artistsite1.jpg',
-            'img/project-img/artistsite/artistsite2.jpg',
-         ],
-         tech: ['JavaScript', 'CSS', 'HTML'],
-         team: [
-            {
-               name: 'Le Ly Thanh Hai',
-               role: 'Frontend Developer',
-               responsibilities: 'All'
-            }
-         ]
-      },
-      {
-         title: 'Cocoonsite',
-         description: 'コクーンタワーの魅力を発信する総合情報サイト',
-         fullDescription: `コクーンタワーの施設情報、テナント情報、教育機関情報を一元化した総合情報ポータルです。洗練された直感的なデザインにより、求める情報へのアクセスを容易にしています。視覚的にわかりやすいアクセスマップと施設案内により、初めての来訪者でも迷うことなく目的地へ到着できるよう配慮されています。<br><br>※このサイトは、学習プロジェクトです。`,
-         image: 'img/project-img/cocoonsite/cocoonsite.jpg',
-         gallery: [
-            'img/project-img/cocoonsite/cocoonsite1.jpg',
-            'img/project-img/cocoonsite/cocoonsite2.jpg',
-            'img/project-img/cocoonsite/cocoonsite3.jpg',
-         ],
-         tech: ['CSS', 'HTML'],
-         team: [
-            {
-               name: 'Le Ly Thanh Hai',
-               role: 'Frontend Developer',
-               responsibilities: 'Frontend development, ...'
-            },
-            {
-               name: '程世豪',
-               role: 'UI/UX Designer',
-               responsibilities: 'UI/UX Design, Logo Design, ...'
-            },
-            {
-               name: '有薗柊哉',
-               role: 'Photographer',
-               responsibilities: 'Photo, ...'
-            },
-            {
-               name: '若林真緒',
-               role: 'Planner',
-               responsibilities: 'Plan, ...'
-            }
-         ]
-      },
-      {
-         title: 'MovieSite',
-         description: '映画「Interstellar」の公式プロモーションサイト',
-         fullDescription: `映画「Interstellar」の魅力を伝える公式サイトです。作品概要、キャスト情報、レビューなど、映画の世界観を余すことなく紹介します。宇宙をモチーフにしたUIデザインにより、作品の壮大なスケールを視覚的に表現しています。<br><br>※このサイトは、学習プロジェクトです。`,
-         image: 'img/project-img/moviesite/moviesite.jpg',
-         gallery: [
-            'img/project-img/moviesite/moviesite1.jpg',
-            'img/project-img/moviesite/moviesite2.jpg',
-            'img/project-img/moviesite/moviesite3.jpg',
-         ],
-         tech: ['CSS', 'HTML'],
-         team: [
-            {
-               name: 'Le Ly Thanh Hai',
-               role: 'Frontend Developer',
-               responsibilities: 'All'
-            }
-         ]
-      },
-      {
-         title: 'CafeSite',
-         description: '架空のカフェを演出する雰囲気重視の情報サイト',
-         fullDescription: `架空のカフェの世界観を表現したウェブサイトです。カフェならではの温かみのある雰囲気をUIデザインで表現し、メニュー情報、アクセス情報、ニュースなど、実在するかのような臨場感のある情報を提供します。<br><br>※このサイトは、学習プロジェクトです。`,
-         image: 'img/project-img/cafesite/cafesite.png',
-         gallery: [
-            'img/project-img/cafesite/cafesite1.jpg',
-            'img/project-img/cafesite/cafesite2.jpg',
-            'img/project-img/cafesite/cafesite3.jpg',
-            'img/project-img/cafesite/cafesite4.jpg',
-         ],
-         tech: ['CSS', 'HTML'],
-         team: [
-            {
-               name: 'Le Ly Thanh Hai',
-               role: 'Frontend Developer',
-               responsibilities: 'All'
-            }
-         ]
-      }
-   ];
+  const projects = [
+    {
+      title: "MusicPlayer",
+      description: "オンラインで音楽を楽しむためのWebアプリケーション",
+      fullDescription:
+        'MusicPlayerは、オンライン音楽プレイヤーの機能を提供するWebアプリケーションです。再生、シャッフル、次へ、前へ、リピートなどの基本的な操作をサポートしています。プレイリストから曲をクリックするとその曲を再生できます。また、歌詞の表示機能がありリアルタイム歌ってるところをハイライトされています。<br><br>サイトのリンク先:<a href="https://anhnangcuaem.github.io/MusicPlayer/"><button class="link-btn">こちら</button></a><br><br>Github: <a href="https://github.com/AnhNangCuaEm/MusicPlayer"><button class="link-btn">こちら</button></a>',
+      image:
+        "img/project-img/musicplayer/Screenshot 2025-03-10 at 10.50.03 PM.png",
+      gallery: [
+        "img/project-img/musicplayer/Screenshot 2025-03-10 at 10.42.51 PM.png",
+        "img/project-img/musicplayer/Screenshot 2025-03-10 at 10.43.07 PM.png",
+        "img/project-img/musicplayer/Screenshot 2025-03-10 at 10.43.25 PM.png",
+      ],
+      tech: ["JavaScript", "HTML", "CSS"],
+      team: [
+        {
+          name: "Le Ly Thanh Hai",
+          role: "Frontend Developer",
+          responsibilities: "All",
+        },
+      ],
+    },
+    {
+      title: "GreenSpace",
+      description:
+        "公園施設とイベント情報を提供する総合ポータルサイトと管理システム",
+      fullDescription: `GreenSpaceは、あらゆるデバイスに最適化されたモダンなレスポンシブデザインを採用し、直感的な操作性を実現しています。リアルタイム検索機能により、ユーザーは必要な公園やイベント情報にスムーズにアクセスできます。管理者向けには、データベースの専門知識がなくても簡単に情報を管理できる専用システムを実装。さらに、アクセス解析やユーザーフィードバックの可視化機能により、効果的な運営をサポートします。堅牢なアカウント管理システムにより、安全性と使いやすさを両立させています。<br><br>Github:<a href="https://github.com/AnhNangCuaEm/GREENSPACE" ><button class="link-btn">こちら</button></a><br><br>※このサイトは、学習プロジェクトです。`,
+      image: "img/project-img/greenspace/greenspace.jpg",
+      gallery: [
+        "img/project-img/greenspace/greenspace1.png",
+        "img/project-img/greenspace/greenspace2.jpg",
+        "img/project-img/greenspace/greenspace3.jpg",
+        "img/project-img/greenspace/greenspace4.jpg",
+      ],
+      tech: ["PHP", "JavaScript", "MySQL", "CSS", "HTML"],
+      team: [
+        {
+          name: "Le Ly Thanh Hai",
+          role: "Full Stack Developer",
+          responsibilities: "All",
+        },
+      ],
+    },
+    {
+      title: "DeepShinjuku",
+      description: "新宿の都市伝説と怪談を紐解く没入型ウェブ体験",
+      fullDescription: `「DEEP新宿 - 新宿怪談集」は、新宿区に伝わる不思議な物語と都市伝説を現代的な視点で紹介するウェブサイトです。長い歴史の中で織りなされてきた数々の怪談や都市伝説を通じて、新宿という街が持つ独特の文化的深層に迫ります。現代都市の喧騒の中に潜む神秘的な物語の数々が、訪れる人々を魅了する新しい新宿の一面を提示します。<br><br>Github: <a href="https://github.com/AnhNangCuaEm/Deep-Shinjuku"><button class="link-btn">こちら</button></a><br><br>※このサイトは、学習プロジェクトです。`,
+      image: "img/project-img/deepshinjuku/deepshinjuku.jpeg",
+      gallery: [
+        "img/project-img/deepshinjuku/deepshinjuku1.jpg",
+        "img/project-img/deepshinjuku/deepshinjuku2.jpg",
+        "img/project-img/deepshinjuku/deepshinjuku3.png",
+        "img/project-img/deepshinjuku/deepshinjuku4.jpg",
+      ],
+      tech: ["PHP", "JavaScript", "CSS", "HTML"],
+      team: [
+        {
+          name: "Le Ly Thanh Hai",
+          role: "Backend Developer",
+          responsibilities: "Like and Comment Function, ...",
+        },
+        {
+          name: "LIUCHIAWEI",
+          role: "Frontend Developer",
+          responsibilities: "Index Page, Animation, ...",
+        },
+        {
+          name: "李森",
+          role: "UI/UX Designer",
+          responsibilities: "UI/UX Design, ...",
+        },
+        {
+          name: "KAUNGTHAR",
+          role: "Photographer",
+          responsibilities: "Photo, Presentation, ...",
+        },
+        {
+          name: "鍾嘉朗",
+          role: "Frontend Developer",
+          responsibilities: "Intro Page, ...",
+        },
+        {
+          name: "若林真緒",
+          role: "Planner",
+          responsibilities: "Plan, ...",
+        },
+      ],
+    },
+    {
+      title: "BoulangerieSite",
+      description: "西新宿のベーカリーの魅力を伝えるブランドサイト",
+      fullDescription: `西新宿に位置するベーカリーの魅力を余すことなく伝えるウェブサイトです。こだわりの商品メニュー、店舗へのアクセス、最新ニュースなど、パン好きの心をくすぐる情報を丁寧に紹介しています。<br><br>Github: <a href="https://github.com/AnhNangCuaEm/Boulangerie"><button class="link-btn">こちら</button></a><br><br>※このサイトは、学習プロジェクトです。`,
+      image: "img/project-img/boulangerie/boulangerie.jpg",
+      gallery: [
+        "img/project-img/boulangerie/boulangerie1.jpg",
+        "img/project-img/boulangerie/boulangerie2.jpg",
+        "img/project-img/boulangerie/boulangerie3.jpg",
+        "img/project-img/boulangerie/boulangerie4.jpg",
+      ],
+      tech: ["JavaScript", "Tailwind CSS", "HTML"],
+      team: [
+        {
+          name: "Le Ly Thanh Hai",
+          role: "Frontend Developer",
+          responsibilities: "All",
+        },
+      ],
+    },
+    {
+      title: "Artissite",
+      description:
+        "アーティストの創造世界を表現するクリエイティブポートフォリオ",
+      fullDescription: `アーティストの独創性と芸術世界を最大限に引き出すよう設計された、モダンでインタラクティブなポートフォリオサイトです。作品展示やプロフィール、SNSフィード、今後のイベント情報など、アーティストの活動を多角的に発信します。洗練されたアニメーションとレスポンシブデザインにより、デバイスを問わず没入感のある閲覧体験を提供します。<br><br>※このサイトは、学習プロジェクトです。`,
+      image: "img/project-img/artistsite/artissite.jpg",
+      gallery: [
+        "img/project-img/artistsite/artistsite1.jpg",
+        "img/project-img/artistsite/artistsite2.jpg",
+      ],
+      tech: ["JavaScript", "CSS", "HTML"],
+      team: [
+        {
+          name: "Le Ly Thanh Hai",
+          role: "Frontend Developer",
+          responsibilities: "All",
+        },
+      ],
+    },
+    {
+      title: "Cocoonsite",
+      description: "コクーンタワーの魅力を発信する総合情報サイト",
+      fullDescription: `コクーンタワーの施設情報、テナント情報、教育機関情報を一元化した総合情報ポータルです。洗練された直感的なデザインにより、求める情報へのアクセスを容易にしています。視覚的にわかりやすいアクセスマップと施設案内により、初めての来訪者でも迷うことなく目的地へ到着できるよう配慮されています。<br><br>※このサイトは、学習プロジェクトです。`,
+      image: "img/project-img/cocoonsite/cocoonsite.jpg",
+      gallery: [
+        "img/project-img/cocoonsite/cocoonsite1.jpg",
+        "img/project-img/cocoonsite/cocoonsite2.jpg",
+        "img/project-img/cocoonsite/cocoonsite3.jpg",
+      ],
+      tech: ["CSS", "HTML"],
+      team: [
+        {
+          name: "Le Ly Thanh Hai",
+          role: "Frontend Developer",
+          responsibilities: "Frontend development, ...",
+        },
+        {
+          name: "程世豪",
+          role: "UI/UX Designer",
+          responsibilities: "UI/UX Design, Logo Design, ...",
+        },
+        {
+          name: "有薗柊哉",
+          role: "Photographer",
+          responsibilities: "Photo, ...",
+        },
+        {
+          name: "若林真緒",
+          role: "Planner",
+          responsibilities: "Plan, ...",
+        },
+      ],
+    },
+    {
+      title: "MovieSite",
+      description: "映画「Interstellar」の公式プロモーションサイト",
+      fullDescription: `映画「Interstellar」の魅力を伝える公式サイトです。作品概要、キャスト情報、レビューなど、映画の世界観を余すことなく紹介します。宇宙をモチーフにしたUIデザインにより、作品の壮大なスケールを視覚的に表現しています。<br><br>※このサイトは、学習プロジェクトです。`,
+      image: "img/project-img/moviesite/moviesite.jpg",
+      gallery: [
+        "img/project-img/moviesite/moviesite1.jpg",
+        "img/project-img/moviesite/moviesite2.jpg",
+        "img/project-img/moviesite/moviesite3.jpg",
+      ],
+      tech: ["CSS", "HTML"],
+      team: [
+        {
+          name: "Le Ly Thanh Hai",
+          role: "Frontend Developer",
+          responsibilities: "All",
+        },
+      ],
+    },
+    {
+      title: "CafeSite",
+      description: "架空のカフェを演出する雰囲気重視の情報サイト",
+      fullDescription: `架空のカフェの世界観を表現したウェブサイトです。カフェならではの温かみのある雰囲気をUIデザインで表現し、メニュー情報、アクセス情報、ニュースなど、実在するかのような臨場感のある情報を提供します。<br><br>※このサイトは、学習プロジェクトです。`,
+      image: "img/project-img/cafesite/cafesite.png",
+      gallery: [
+        "img/project-img/cafesite/cafesite1.jpg",
+        "img/project-img/cafesite/cafesite2.jpg",
+        "img/project-img/cafesite/cafesite3.jpg",
+        "img/project-img/cafesite/cafesite4.jpg",
+      ],
+      tech: ["CSS", "HTML"],
+      team: [
+        {
+          name: "Le Ly Thanh Hai",
+          role: "Frontend Developer",
+          responsibilities: "All",
+        },
+      ],
+    },
+  ];
 
-   function renderProjects() {
-      return `
-         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            ${projects.map((project, index) => `
-               <div class="project-card bg-gray-800/30 backdrop-blur-md rounded-xl overflow-hidden border border-gray-700/30 
-                         cursor-pointer opacity-0 translate-y-4 w-full"
-                    data-show-delay="${index * 100}"
-                    onclick="openProjectModal(${index})">
-                  <img src="${project.image}" alt="${project.title}" class="w-full h-52 object-cover">
-                  <div class="p-6">
-                      <h3 class="text-xl text-white font-bold mb-2">${project.title}</h3>
-                      <p class="text-gray-300 mb-4">${project.description}</p>
-                      <div class="flex flex-wrap gap-2">
-                          ${project.tech.map(t => `
-                              <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">${t}</span>
-                          `).join('')}
-                      </div>
-                  </div>
-               </div>
-            `).join('')}
-         </div>
-
-         <!-- Project Modal -->
-         <div id="projectModal" class="fixed inset-0  z-50 hidden">
-            <div class="container mx-auto min-h-full flex items-center justify-center py-8 px-4">
-               <div class="bg-white/5 backdrop-blur-xl rounded-3xl max-w-4xl mx-auto border border-white/10 shadow-2xl 
-                           transform scale-0 opacity-0 transition-all duration-300 ease-out">
-                  <div class="relative">
-                     <button onclick="closeProjectModal()" 
-                             class="absolute -right-0 -top-0 bg-white/5 backdrop-blur-xl border border-white/10 rounded-full p-2 
-                                    text-white hover:text-purple-400 transition-colors duration-300 hover:border-purple-400/50 z-10">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                        </svg>
-                     </button>
-                     <div id="modalContent" class="p-8 bg-black/30 rounded-3xl border border-white/10 shadow-2xl">
+  function renderProjects() {
+   return `
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+           ${projects
+             .map(
+               (project, index) => `
+              <div class="project-card bg-gray-800/30 backdrop-blur-md rounded-xl overflow-hidden border border-gray-700/30 
+                        cursor-pointer opacity-0 translate-y-4 w-full relative h-80"
+                   data-show-delay="${index * 100}"
+                   onclick="openProjectModal(${index})">
+                 <img src="${project.image}" alt="${project.title}" class="w-full h-full object-cover">
+                 <div class="absolute inset-0 bg-black/45 backdrop-blur-[2px] p-6 flex flex-col justify-end">
+                     <h3 class="text-2xl text-white font-bold mb-2">${project.title}</h3>
+                     <p class="text-gray-300 mb-4">${project.description}</p>
+                     <div class="flex flex-wrap gap-2">
+                         ${project.tech
+                           .map(
+                             (t) => `
+                             <span class="px-3 py-1 bg-purple-500/50 text-purple-300 rounded-full text-sm">${t}</span>
+                         `
+                           )
+                           .join("")}
                      </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      `;
-   }
+                 </div>
+              </div>
+           `
+             )
+             .join("")}
+        </div>
 
-   function renderContact() {
-      return `
+        <!-- Project Modal -->
+        <div id="projectModal" class="fixed inset-0 z-50 hidden">
+           <div class="container mx-auto min-h-full flex items-center justify-center py-8 px-4">
+              <div class="bg-white/5 backdrop-blur-xl rounded-3xl max-w-4xl mx-auto border border-white/10 shadow-2xl 
+                          transform scale-0 opacity-0 transition-all duration-300 ease-out">
+                 <div class="relative">
+                    <button onclick="closeProjectModal()" 
+                            class="absolute -right-0 -top-0 bg-white/5 backdrop-blur-xl border border-white/10 rounded-full p-2 
+                                   text-white hover:text-purple-400 transition-colors duration-300 hover:border-purple-400/50 z-10">
+                       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                       </svg>
+                    </button>
+                    <div id="modalContent" class="p-8 bg-black/30 rounded-3xl border border-white/10 shadow-2xl">
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     `;
+ }
+
+  function renderContact() {
+    return `
         <div class="max-w-2xl mx-auto">
             <div class="bg-white/5 backdrop-blur-xl rounded-2xl p-8 border border-white/10 shadow-2xl
                         opacity-0 translate-y-4 animate-content">
@@ -757,191 +800,194 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
         </div>
     `;
-   }
+  }
 
-   // Move the event listener setup into a function
-   function setupModalListeners() {
-      const modal = document.getElementById('projectModal');
-      if (modal) {
-         modal.addEventListener('click', (e) => {
-            if (e.target.id === 'projectModal') {
-               closeProjectModal();
-            }
-         });
+  // Move the event listener setup into a function
+  function setupModalListeners() {
+    const modal = document.getElementById("projectModal");
+    if (modal) {
+      modal.addEventListener("click", (e) => {
+        if (e.target.id === "projectModal") {
+          closeProjectModal();
+        }
+      });
 
-         // Add escape key listener
-         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
-               closeProjectModal();
-            }
-         });
+      // Add escape key listener
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+          closeProjectModal();
+        }
+      });
+    }
+  }
+
+  // Update the menu click handler to call setupModalListeners
+  document.querySelectorAll(".menu-item").forEach((item) => {
+    item.addEventListener("click", (e) => {
+      document
+        .querySelectorAll(".menu-item")
+        .forEach((i) => i.classList.remove("bg-white/10"));
+
+      e.currentTarget.classList.add("bg-white/10");
+
+      const section = e.currentTarget.dataset.section;
+      const contentDiv = document.getElementById("content");
+
+      switch (section) {
+        case "info":
+          contentDiv.innerHTML = renderInfo();
+          break;
+        case "skills":
+          contentDiv.innerHTML = renderSkills();
+          animateSkills();
+          break;
+        case "projects":
+          contentDiv.innerHTML = renderProjects();
+          initProjectsAnimation();
+          setupModalListeners();
+          break;
+        case "contact":
+          contentDiv.innerHTML = renderContact();
+          initContactForm();
+          break;
       }
-   }
 
-   // Update the menu click handler to call setupModalListeners
-   document.querySelectorAll('.menu-item').forEach(item => {
-      item.addEventListener('click', (e) => {
-         document.querySelectorAll('.menu-item').forEach(i =>
-            i.classList.remove('bg-white/10'));
+      // Automatically close the side menu after clicking a menu item
+      const sideMenu = document.getElementById("sideMenu");
+      const menuToggle = document.getElementById("menuToggle");
+      const menuIcon = document.getElementById("menuIcon");
 
-         e.currentTarget.classList.add('bg-white/10');
-
-         const section = e.currentTarget.dataset.section;
-         const contentDiv = document.getElementById('content');
-
-         switch (section) {
-            case 'info':
-               contentDiv.innerHTML = renderInfo();
-               break;
-            case 'skills':
-               contentDiv.innerHTML = renderSkills();
-               animateSkills();
-               break;
-            case 'projects':
-               contentDiv.innerHTML = renderProjects();
-               initProjectsAnimation();
-               setupModalListeners();
-               break;
-            case 'contact':
-               contentDiv.innerHTML = renderContact();
-               initContactForm();
-               break;
-         }
-
-         // Automatically close the side menu after clicking a menu item
-         const sideMenu = document.getElementById('sideMenu');
-         const menuToggle = document.getElementById('menuToggle');
-         const menuIcon = document.getElementById('menuIcon');
-
-         // Check if the menu is open
-         if (!sideMenu.classList.contains('-translate-x-full')) {
-            sideMenu.classList.add('-translate-x-full');
-            menuToggle.classList.add('-translate-x-64');
-            menuIcon.style.transform = 'rotate(0deg)';
-         }
-      });
-   });
-
-   // Mobile menu toggle
-   document.getElementById('menuToggle').addEventListener('click', () => {
-      const sideMenu = document.getElementById('sideMenu');
-      const menuToggle = document.getElementById('menuToggle');
-      const menuIcon = document.getElementById('menuIcon');
-      const isOpen = !sideMenu.classList.contains('-translate-x-full');
-
-      if (isOpen) {
-         sideMenu.classList.add('-translate-x-full');
-         menuToggle.classList.add('-translate-x-64');
-         menuIcon.style.transform = 'rotate(0deg)';
-      } else {
-         sideMenu.classList.remove('-translate-x-full');
-         menuToggle.classList.remove('-translate-x-64');
-         menuIcon.style.transform = 'rotate(180deg)';
+      // Check if the menu is open
+      if (!sideMenu.classList.contains("-translate-x-full")) {
+        sideMenu.classList.add("-translate-x-full");
+        menuToggle.classList.add("-translate-x-64");
+        menuIcon.style.transform = "rotate(0deg)";
       }
-   });
+    });
+  });
 
-   function animateSkills() {
-      const skillBars = document.querySelectorAll('.skill-bar');
-      const skillPercentages = document.querySelectorAll('.skill-percentage');
+  // Mobile menu toggle
+  document.getElementById("menuToggle").addEventListener("click", () => {
+    const sideMenu = document.getElementById("sideMenu");
+    const menuToggle = document.getElementById("menuToggle");
+    const menuIcon = document.getElementById("menuIcon");
+    const isOpen = !sideMenu.classList.contains("-translate-x-full");
 
-      skillBars.forEach((bar, index) => {
-         const target = parseInt(skillPercentages[index].dataset.target);
-         let width = 0;
-         const duration = 1500;
-         const interval = 10;
-         const increment = (target / duration) * interval;
+    if (isOpen) {
+      sideMenu.classList.add("-translate-x-full");
+      menuToggle.classList.add("-translate-x-64");
+      menuIcon.style.transform = "rotate(0deg)";
+    } else {
+      sideMenu.classList.remove("-translate-x-full");
+      menuToggle.classList.remove("-translate-x-64");
+      menuIcon.style.transform = "rotate(180deg)";
+    }
+  });
 
-         const animation = setInterval(() => {
-            if (width >= target) {
-               clearInterval(animation);
-               return;
-            }
-            width += increment;
-            if (width > target) width = target;
+  function animateSkills() {
+    const skillBars = document.querySelectorAll(".skill-bar");
+    const skillPercentages = document.querySelectorAll(".skill-percentage");
 
-            bar.style.width = `${width}%`;
-            skillPercentages[index].textContent = `${Math.round(width)}%`;
-         }, interval);
-      });
-   }
+    skillBars.forEach((bar, index) => {
+      const target = parseInt(skillPercentages[index].dataset.target);
+      let width = 0;
+      const duration = 1500;
+      const interval = 10;
+      const increment = (target / duration) * interval;
 
-   function initProjectsAnimation() {
-      const observer = new IntersectionObserver((entries) => {
-         entries.forEach(entry => {
-            if (entry.isIntersecting) {
-               const delay = entry.target.dataset.showDelay;
-               setTimeout(() => {
-                  entry.target.classList.add('show');
-               }, delay);
-               observer.unobserve(entry.target);
-            }
-         });
-      }, {
-         threshold: 0.1,
-         rootMargin: '50px'
-      });
+      const animation = setInterval(() => {
+        if (width >= target) {
+          clearInterval(animation);
+          return;
+        }
+        width += increment;
+        if (width > target) width = target;
 
-      document.querySelectorAll('.project-card').forEach(card => {
-         observer.observe(card);
-      });
-   }
+        bar.style.width = `${width}%`;
+        skillPercentages[index].textContent = `${Math.round(width)}%`;
+      }, interval);
+    });
+  }
 
-   function initContactForm() {
-      const form = document.getElementById('contactForm');
-      const successMessage = document.getElementById('successMessage');
-      const errorMessage = document.getElementById('errorMessage');
+  function initProjectsAnimation() {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const delay = entry.target.dataset.showDelay;
+            setTimeout(() => {
+              entry.target.classList.add("show");
+            }, delay);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+        rootMargin: "50px",
+      }
+    );
 
-      form.addEventListener('submit', async (e) => {
-         e.preventDefault();
+    document.querySelectorAll(".project-card").forEach((card) => {
+      observer.observe(card);
+    });
+  }
 
-         const submitButton = form.querySelector('button[type="submit"]');
-         submitButton.disabled = true;
-         submitButton.innerHTML = 'Sending...';
+  function initContactForm() {
+    const form = document.getElementById("contactForm");
+    const successMessage = document.getElementById("successMessage");
+    const errorMessage = document.getElementById("errorMessage");
 
-         successMessage.classList.add('hidden');
-         errorMessage.classList.add('hidden');
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
 
-         const formData = {
-            from_name: form.from_name.value,
-            from_email: form.from_email.value,
-            message: form.message.value
-         };
+      const submitButton = form.querySelector('button[type="submit"]');
+      submitButton.disabled = true;
+      submitButton.innerHTML = "Sending...";
 
-         try {
-            const result = await emailjs.sendForm(
-               'service_uno6zzf',
-               'template_svg8ahb',
-               form,  // Gửi form trực tiếp thay vì formData
-               '2QtkhVZdrh0jfJEBt'
-            );
+      successMessage.classList.add("hidden");
+      errorMessage.classList.add("hidden");
 
+      const formData = {
+        from_name: form.from_name.value,
+        from_email: form.from_email.value,
+        message: form.message.value,
+      };
 
-            if (result.status === 200) {
-               successMessage.classList.remove('hidden');
-               form.reset();
-            } else {
-               errorMessage.classList.remove('hidden');
-            }
-         } catch (error) {
-            errorMessage.classList.remove('hidden');
-         } finally {
-            // Restore button state
-            submitButton.disabled = false;
-            submitButton.innerHTML = 'Send Message';
-         }
-      });
-   }
+      try {
+        const result = await emailjs.sendForm(
+          "service_uno6zzf",
+          "template_svg8ahb",
+          form, // Gửi form trực tiếp thay vì formData
+          "2QtkhVZdrh0jfJEBt"
+        );
 
-   // Add these functions at the end of your DOMContentLoaded event listener
-   window.openProjectModal = function (index) {
-      const project = projects[index];
-      const modal = document.getElementById('projectModal');
-      const modalContent = document.getElementById('modalContent');
-      const modalContainer = modalContent.parentElement.parentElement;
+        if (result.status === 200) {
+          successMessage.classList.remove("hidden");
+          form.reset();
+        } else {
+          errorMessage.classList.remove("hidden");
+        }
+      } catch (error) {
+        errorMessage.classList.remove("hidden");
+      } finally {
+        // Restore button state
+        submitButton.disabled = false;
+        submitButton.innerHTML = "Send Message";
+      }
+    });
+  }
 
-      // Update modal structure with max-height and scrollable content
-      modal.classList = "fixed inset-0 z-50 hidden flex items-center justify-center p-4";
-      modal.innerHTML = `
+  window.openProjectModal = function (index) {
+    const project = projects[index];
+    const modal = document.getElementById("projectModal");
+    const modalContent = document.getElementById("modalContent");
+    const modalContainer = modalContent.parentElement.parentElement;
+
+    // Update modal structure with max-height and scrollable content
+    modal.classList =
+      "fixed inset-0 z-50 hidden flex items-center justify-center p-4";
+    modal.innerHTML = `
          <div class="absolute inset-0" onclick="closeProjectModal()"></div>
          <div class="bg-white/5 backdrop-blur-xl rounded-3xl w-full max-w-3xl mx-auto border border-white/10 shadow-2xl 
                      transform scale-0 opacity-0 transition-all duration-300 ease-out relative max-h-[90vh]">
@@ -959,97 +1005,124 @@ document.addEventListener('DOMContentLoaded', () => {
          </div>
       `;
 
-      // Set content with scrollable area
-      document.getElementById('modalContent').innerHTML = `
+    // Set content with scrollable area
+    document.getElementById("modalContent").innerHTML = `
          <div class="space-y-6 max-h-[calc(85vh-4rem)] overflow-y-auto rounded-xl">
             <!-- Image Gallery -->
             <div class="relative">
                 <div class="flex space-x-4 overflow-x-auto rounded-xl">
-                    <img src="${project.image}" alt="${project.title}" class="max-h-[300px] w-auto object-cover rounded-xl aspect-16/9">
-                    ${project.gallery ? project.gallery.map(img => `
+                    <img src="${project.image}" alt="${
+      project.title
+    }" class="max-h-[300px] w-auto object-cover rounded-xl aspect-16/9">
+                    ${
+                      project.gallery
+                        ? project.gallery
+                            .map(
+                              (img) => `
                         <img src="${img}" alt="${project.title}" class="max-h-[300px] w-auto object-cover rounded-xl aspect-16/9">
-                    `).join('') : ''}
+                    `
+                            )
+                            .join("")
+                        : ""
+                    }
                 </div>
                 <div class="w-full text-center text-white text-sm mt-2">Swipe to see more</div>
             </div>
 
             <!-- Rest of the content -->
             <div>
-                <h2 class="text-3xl font-bold text-white mb-4">${project.title}</h2>
-                <p class="text-gray-300 mb-6 text-warp">${project.fullDescription || project.description}</p>
+                <h2 class="text-3xl font-bold text-white mb-4">${
+                  project.title
+                }</h2>
+                <p class="text-gray-300 mb-6 text-warp">${
+                  project.fullDescription || project.description
+                }</p>
 
                 <!-- Technologies -->
                 <h3 class="text-xl font-bold text-white mb-3">Technologies Used</h3>
                 <div class="flex flex-wrap gap-2 mb-6">
-                    ${project.tech.map(t => `
+                    ${project.tech
+                      .map(
+                        (t) => `
                         <span class="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full border border-purple-500/30">${t}</span>
-                    `).join('')}
+                    `
+                      )
+                      .join("")}
                 </div>
 
                 <!-- Team Members -->
-                ${project.team ? `
+                ${
+                  project.team
+                    ? `
                     <h3 class="text-xl font-bold text-white mb-3">Team Members</h3>
                     <div class="grid md:grid-cols-2 gap-4">
-                        ${project.team.map(member => `
+                        ${project.team
+                          .map(
+                            (member) => `
                             <div class="bg-white/5 backdrop-blur-md rounded-lg p-4 border border-white/10">
                                 <h4 class="text-lg font-semibold text-white">${member.name}</h4>
                                 <p class="text-purple-400">${member.role}</p>
                                 <p class="text-gray-400 mt-2">${member.responsibilities}</p>
                             </div>
-                        `).join('')}
+                        `
+                          )
+                          .join("")}
                     </div>
-                ` : ''}
+                `
+                    : ""
+                }
             </div>
          </div>
       `;
 
-      modal.classList.remove('hidden');
-      document.body.style.overflow = 'hidden';
+    modal.classList.remove("hidden");
+    document.body.style.overflow = "hidden";
 
-      // Add scale and fade-in animation
-      const newModalContainer = modal.querySelector('.bg-white\\/5');
-      requestAnimationFrame(() => {
-         newModalContainer.classList.remove('scale-0', 'opacity-0');
-         newModalContainer.classList.add('scale-100', 'opacity-100');
-      });
-   };
+    // Add scale and fade-in animation
+    const newModalContainer = modal.querySelector(".bg-white\\/5");
+    requestAnimationFrame(() => {
+      newModalContainer.classList.remove("scale-0", "opacity-0");
+      newModalContainer.classList.add("scale-100", "opacity-100");
+    });
+  };
 
-   window.closeProjectModal = function () {
-      const modal = document.getElementById('projectModal');
-      const modalContainer = modal.querySelector('.bg-white\\/5');
+  window.closeProjectModal = function () {
+    const modal = document.getElementById("projectModal");
+    const modalContainer = modal.querySelector(".bg-white\\/5");
 
-      // Add scale and fade-out animation
-      modalContainer.classList.remove('scale-100', 'opacity-100');
-      modalContainer.classList.add('scale-0', 'opacity-0');
+    // Add scale and fade-out animation
+    modalContainer.classList.remove("scale-100", "opacity-100");
+    modalContainer.classList.add("scale-0", "opacity-0");
 
+    setTimeout(() => {
+      modal.classList.add("hidden");
+      document.body.style.overflow = "auto";
+    }, 300);
+  };
+
+  // Add animation for side menu on page load (PC only)
+  function initSideMenuAnimation() {
+    const sideMenu = document.getElementById("sideMenu");
+    if (window.innerWidth >= 1024) {
+      // lg breakpoint
       setTimeout(() => {
-         modal.classList.add('hidden');
-         document.body.style.overflow = 'auto';
+        sideMenu.style.transform = "translate(16px, -50%)";
       }, 300);
-   };
+    } else {
+      sideMenu.style.transform = ""; // Reset transform on mobile
+    }
+  }
 
-   // Add animation for side menu on page load (PC only)
-   function initSideMenuAnimation() {
-      const sideMenu = document.getElementById('sideMenu');
-      if (window.innerWidth >= 1024) { // lg breakpoint
-         setTimeout(() => {
-            sideMenu.style.transform = 'translate(16px, -50%)';
-         }, 300);
-      } else {
-         sideMenu.style.transform = ''; // Reset transform on mobile
-      }
-   }
+  // Add resize listener to handle responsive behavior
+  window.addEventListener("resize", () => {
+    const sideMenu = document.getElementById("sideMenu");
+    if (window.innerWidth >= 1024) {
+      sideMenu.style.transform = "translate(16px, -50%)";
+    } else {
+      sideMenu.style.transform = ""; // Reset transform on mobile
+      sideMenu.classList.add("-translate-x-full"); // Ensure menu is hidden on mobile
+    }
+  });
 
-   // Add resize listener to handle responsive behavior
-   window.addEventListener('resize', () => {
-      const sideMenu = document.getElementById('sideMenu');
-      if (window.innerWidth >= 1024) {
-         sideMenu.style.transform = 'translate(16px, -50%)';
-      } else {
-         sideMenu.style.transform = ''; // Reset transform on mobile
-         sideMenu.classList.add('-translate-x-full'); // Ensure menu is hidden on mobile
-      }
-   });
-
-   initSideMenuAnimation();
+  initSideMenuAnimation();
 });
