@@ -581,7 +581,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       title: "BoulangerieSite",
       description: "西新宿のベーカリーの魅力を伝えるブランドサイト",
-      fullDescription: `西新宿に位置するベーカリーの魅力を余すことなく伝えるウェブサイトです。こだわりの商品メニュー、店舗へのアクセス、最新ニュースなど、パン好きの心をくすぐる情報を丁寧に紹介しています。<br><br>サイトのリンク先:<a href="https://boulangerie.anhnangcuaem.com"><button class="link-btn">こちら</button></a><br><br>Github: <a href="https://github.com/AnhNangCuaEm/Boulangerie"><button class="link-btn">こちら</button></a><br><br>※このサイトは、学習プロジェクトです。`,
+      fullDescription: `西新宿に位置するベーカリーの魅力を余すことなく伝えるウェブサイトです。こだわりの商品メニュー、店舗へのアクセス、最新ニュースなど、パン好きの心をくすぐる情報を丁寧に紹介しています。<br><br>サイトのリンク先:<a href="https://boulangeries.anhnangcuaem.com"><button class="link-btn">こちら</button></a><br><br>Github: <a href="https://github.com/AnhNangCuaEm/Boulangerie"><button class="link-btn">こちら</button></a><br><br>※このサイトは、学習プロジェクトです。`,
       image: "img/project-img/boulangerie/boulangerie.jpg",
       gallery: [
         "img/project-img/boulangerie/boulangerie1.jpg",
