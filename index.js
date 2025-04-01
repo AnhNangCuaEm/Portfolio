@@ -579,7 +579,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ],
     },
     {
-      title: "BoulangerieSite",
+      title: "Boulangeries",
       description: "西新宿のベーカリーの魅力を伝えるブランドサイト",
       fullDescription: `西新宿に位置するベーカリーの魅力を余すことなく伝えるウェブサイトです。こだわりの商品メニュー、店舗へのアクセス、最新ニュースなど、パン好きの心をくすぐる情報を丁寧に紹介しています。<br><br>サイトのリンク先:<a href="https://boulangeries.anhnangcuaem.com"><button class="link-btn">こちら</button></a><br><br>Github: <a href="https://github.com/AnhNangCuaEm/Boulangerie"><button class="link-btn">こちら</button></a><br><br>※このサイトは、学習プロジェクトです。`,
       image: "img/project-img/boulangerie/boulangerie.jpg",
@@ -599,7 +599,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ],
     },
     {
-      title: "Artissite",
+      title: "Artist",
       description:
         "アーティストの創造世界を表現するクリエイティブポートフォリオ",
       fullDescription: `アーティストの独創性と芸術世界を最大限に引き出すよう設計された、モダンでインタラクティブなポートフォリオサイトです。作品展示やプロフィール、SNSフィード、今後のイベント情報など、アーティストの活動を多角的に発信します。洗練されたアニメーションとレスポンシブデザインにより、デバイスを問わず没入感のある閲覧体験を提供します。<br><br>※このサイトは、学習プロジェクトです。`,
@@ -618,7 +618,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ],
     },
     {
-      title: "Cocoonsite",
+      title: "CocoonTower",
       description: "コクーンタワーの魅力を発信する総合情報サイト",
       fullDescription: `コクーンタワーの施設情報、テナント情報、教育機関情報を一元化した総合情報ポータルです。洗練された直感的なデザインにより、求める情報へのアクセスを容易にしています。視覚的にわかりやすいアクセスマップと施設案内により、初めての来訪者でも迷うことなく目的地へ到着できるよう配慮されています。<br><br>※このサイトは、学習プロジェクトです。`,
       image: "img/project-img/cocoonsite/cocoonsite.jpg",
