@@ -516,7 +516,7 @@ document.addEventListener("DOMContentLoaded", () => {
       title: "GreenSpace",
       description:
         "公園施設とイベント情報を提供する総合ポータルサイトと管理システム",
-      fullDescription: `GreenSpaceは、あらゆるデバイスに最適化されたモダンなレスポンシブデザインを採用し、直感的な操作性を実現しています。リアルタイム検索機能により、ユーザーは必要な公園やイベント情報にスムーズにアクセスできます。管理者向けには、データベースの専門知識がなくても簡単に情報を管理できる専用システムを実装。さらに、アクセス解析やユーザーフィードバックの可視化機能により、効果的な運営をサポートします。堅牢なアカウント管理システムにより、安全性と使いやすさを両立させています。<br><br>Github:<a href="https://github.com/AnhNangCuaEm/GREENSPACE" ><button class="link-btn">こちら</button></a><br><br>※このサイトは、学習プロジェクトです。`,
+      fullDescription: `GreenSpaceは、あらゆるデバイスに最適化されたモダンなレスポンシブデザインを採用し、直感的な操作性を実現しています。リアルタイム検索機能により、ユーザーは必要な公園やイベント情報にスムーズにアクセスできます。管理者向けには、データベースの専門知識がなくても簡単に情報を管理できる専用システムを実装。さらに、アクセス解析やユーザーフィードバックの可視化機能により、効果的な運営をサポートします。堅牢なアカウント管理システムにより、安全性と使いやすさを両立させています。<br><br>サイトのリンク先:<a href="https://www.green-space.tech"><button class="link-btn">こちら</button></a><br><br>Github:<a href="https://github.com/AnhNangCuaEm/GREENSPACE" ><button class="link-btn">こちら</button></a><br><br>※このサイトは、学習プロジェクトです。`,
       image: "img/project-img/greenspace/greenspace.jpg",
       gallery: [
         "img/project-img/greenspace/greenspace1.png",
