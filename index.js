@@ -440,10 +440,16 @@ document.addEventListener("DOMContentLoaded", () => {
                                   <i class="fab fa-linkedin text-xl sm:text-2xl"></i>
                                   <span>LinkedIn</span>
                               </a>
-                              <div class="flex items-center text-gray-300">
-                                  <i class="fas fa-envelope text-xl sm:text-2xl mr-2"></i>
-                                  <span class="text-sm sm:text-base">thanhhailth1302@gmail.com</span>
-                              </div>
+                            <div class="flex items-center text-gray-300 relative group cursor-pointer" 
+                                id="emailContainer" 
+                                onclick="copyEmailToClipboard('thanhhailth1302@gmail.com')">
+                                <i class="fas fa-envelope text-xl sm:text-2xl mr-2"></i>
+                                <span class="text-sm sm:text-base">thanhhailth1302@gmail.com</span>
+                                <!-- Tooltip -->
+                                <div class="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-white/10 backdrop-blur-xl text-white text-xs py-1 px-2 rounded opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all duration-300 whitespace-nowrap border border-white/10">
+                                    Click to copy to clipboard
+                                </div>
+                            </div>
                           </div>
                       </div>
                   </div>
@@ -693,7 +699,7 @@ document.addEventListener("DOMContentLoaded", () => {
   ];
 
   function renderProjects() {
-   return `
+    return `
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
            ${projects
              .map(
@@ -702,9 +708,13 @@ document.addEventListener("DOMContentLoaded", () => {
                         cursor-pointer opacity-0 translate-y-4 w-full relative h-80"
                    data-show-delay="${index * 100}"
                    onclick="openProjectModal(${index})">
-                 <img src="${project.image}" alt="${project.title}" class="w-full h-full object-cover">
+                 <img src="${project.image}" alt="${
+                 project.title
+               }" class="w-full h-full object-cover">
                  <div class="absolute inset-0 bg-black/45 backdrop-blur-[2px] p-6 flex flex-col justify-end">
-                     <p class="text-2xl text-white font-bold mb-2">${project.title}</p>
+                     <p class="text-2xl text-white font-bold mb-2">${
+                       project.title
+                     }</p>
                      <p class="text-gray-300 mb-4">${project.description}</p>
                      <div class="flex flex-wrap gap-2">
                          ${project.tech
@@ -742,7 +752,7 @@ document.addEventListener("DOMContentLoaded", () => {
            </div>
         </div>
      `;
- }
+  }
 
   function renderContact() {
     return `
@@ -1125,4 +1135,52 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   initSideMenuAnimation();
+
+  // Copy email to clipboard
+  window.copyEmailToClipboard = function (email) {
+    navigator.clipboard
+      .writeText(email)
+      .then(function () {
+        // Show success feedback
+        const emailContainer = document.getElementById("emailContainer");
+        const tooltip = emailContainer.querySelector("div");
+
+        // Store original text
+        const originalText = tooltip.textContent;
+
+        // Change text and styling to indicate success
+        tooltip.textContent = "Copied!";
+        tooltip.classList.add("bg-green-500/20");
+        tooltip.classList.add("border-green-500/30");
+
+        // Reset after 5 seconds
+        setTimeout(() => {
+          tooltip.textContent = originalText;
+          tooltip.classList.remove("bg-green-500/20");
+          tooltip.classList.remove("border-green-500/30");
+        }, 5000);
+      })
+      .catch(function (err) {
+        console.error("Could not copy text: ", err);
+
+        // Show error feedback
+        const emailContainer = document.getElementById("emailContainer");
+        const tooltip = emailContainer.querySelector("div");
+
+        // Store original text
+        const originalText = tooltip.textContent;
+
+        // Change text and styling to indicate error
+        tooltip.textContent = "Failed to copy";
+        tooltip.classList.add("bg-red-500/20");
+        tooltip.classList.add("border-red-500/30");
+
+        // Reset after 5 seconds
+        setTimeout(() => {
+          tooltip.textContent = originalText;
+          tooltip.classList.remove("bg-red-500/20");
+          tooltip.classList.remove("border-red-500/30");
+        }, 5000);
+      });
+  };
 });
