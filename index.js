@@ -42,7 +42,8 @@ document.addEventListener("DOMContentLoaded", () => {
                         (item) => `
                         <button 
                             data-section="${item.id}"
-                            class="menu-item w-full text-center text-gray-300 hover:bg-white/10 p-4 rounded-xl transition-all flex flex-col items-center space-y-2
+                            data-cursor="block"
+                            class="cursor-none menu-item w-full text-center text-gray-300 p-4 rounded-xl transition-all flex flex-col items-center space-y-2
                                    ${item.id === "info" ? "bg-white/10" : ""}"
                         >
                             <span class="text-2xl">${item.icon}</span>
@@ -55,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
         </div>
         <button id="menuToggle" class="fixed left-[275px] top-1/2 -translate-y-1/2 bg-white/5 backdrop-blur-xl p-2 rounded-lg border border-white/10 
-            text-white hover:bg-white/10 transition-all duration-300 lg:hidden z-50 transform -translate-x-64">
+            text-white transition-all duration-300 lg:hidden z-50 transform -translate-x-64">
             <svg id="menuIcon" class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
             </svg>
@@ -199,12 +200,19 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       .link-btn {
+        cursor: none;
          background-color: rgb(143 143 143 / 50%);
          color: white;
          border: none;
          padding: 8px 10px;
          margin-left: 7px;
          border-radius: 14px;}
+
+      .link-btn:hover {
+          background-color: rgb(143 143 143 / 70%);
+          color: white;
+          transition: all 0.3s ease;
+          }
 
       @keyframes rotate-circle {
          0% {
@@ -440,7 +448,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                   <i class="fab fa-linkedin text-xl sm:text-2xl"></i>
                                   <span>LinkedIn</span>
                               </a>
-                            <div class="flex items-center text-gray-300 relative group cursor-pointer" 
+                            <div class="flex items-center text-gray-300 relative group" 
                                 id="emailContainer" 
                                 onclick="copyEmailToClipboard('thanhhailth1302@gmail.com')">
                                 <i class="fas fa-envelope text-xl sm:text-2xl mr-2"></i>
@@ -739,7 +747,7 @@ document.addEventListener("DOMContentLoaded", () => {
                           transform scale-0 opacity-0 transition-all duration-300 ease-out">
                  <div class="relative">
                     <button onclick="closeProjectModal()" 
-                            class="absolute -right-0 -top-0 bg-white/5 backdrop-blur-xl border border-white/10 rounded-full p-2 
+                            class="cursor-none absolute -right-0 -top-0 bg-white/5 backdrop-blur-xl border border-white/10 rounded-full p-2 
                                    text-white hover:text-purple-400 transition-colors duration-300 hover:border-purple-400/50 z-10">
                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
@@ -803,7 +811,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         </div>
                         <p class="text-red-500 text-center mt-4">Failed to send message. Please try again later.</p>
                     </div>
-                    <button type="submit" class="w-full bg-purple-500 hover:bg-purple-600 text-white py-3 rounded-lg transition-colors">
+                    <button type="submit" class="cursor-none w-full bg-purple-500 hover:bg-purple-600 text-white py-3 rounded-lg transition-colors">
                         Send Message
                     </button>
                 </form>
@@ -1003,7 +1011,7 @@ document.addEventListener("DOMContentLoaded", () => {
                      transform scale-0 opacity-0 transition-all duration-300 ease-out relative max-h-[90vh]">
             <div class="relative rounded-3xl">
                 <button onclick="closeProjectModal()" 
-                        class="absolute -right-0 -top-0 bg-white/5 backdrop-blur-xl border border-white/10 rounded-full p-2 
+                        class="cursor-none absolute -right-0 -top-0 bg-white/5 backdrop-blur-xl border border-white/10 rounded-full p-2 
                                text-white hover:text-purple-400 transition-colors duration-300 hover:border-purple-400/50 z-10">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
@@ -1135,6 +1143,10 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   initSideMenuAnimation();
+
+  import("https://unpkg.com/ipad-cursor@latest").then(({ initCursor }) =>
+    initCursor()
+  );
 
   // Copy email to clipboard
   window.copyEmailToClipboard = function (email) {
