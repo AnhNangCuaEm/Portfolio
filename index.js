@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 </nav>
             </div>
         </div>
-        <button id="menuToggle" class="fixed left-[275px] top-1/2 -translate-y-1/2 bg-white/5 backdrop-blur-xl p-2 rounded-lg border border-white/10 
+        <button id="menuToggle" class="cursor-none fixed left-[275px] top-1/2 -translate-y-1/2 bg-white/5 backdrop-blur-xl p-2 hover:border-violet-500 rounded-lg border border-white/10 
             text-white transition-all duration-300 lg:hidden z-50 transform -translate-x-64">
             <svg id="menuIcon" class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
@@ -401,7 +401,7 @@ document.addEventListener("DOMContentLoaded", () => {
                           </div>
 
                           <!-- About Me -->
-                          <p class="text-sm sm:text-base text-gray-300 max-w-2xl mx-auto mb-6">
+                          <p data-cursor="text" class="text-sm sm:text-base text-gray-300 max-w-2xl mx-auto mb-6">
                               Web開発を学習中です。フロントエンドではHTML/CSS/JavaScript、バックエンドではPHP/MySQLを使用してプロジェクトを開発しています。
                               現在、NextJsとNode.jsの学習に取り組んでおり、モダンな開発技術の習得に励んでいます。
                               <br><br>
@@ -1134,11 +1134,25 @@ document.addEventListener("DOMContentLoaded", () => {
   // Add resize listener to handle responsive behavior
   window.addEventListener("resize", () => {
     const sideMenu = document.getElementById("sideMenu");
+    const menuToggle = document.getElementById("menuToggle");
+    const menuIcon = document.getElementById("menuIcon");
+  
     if (window.innerWidth >= 1024) {
+      // On desktop view
       sideMenu.style.transform = "translate(16px, -50%)";
+      sideMenu.classList.remove("-translate-x-full"); // Ensure menu is visible on desktop
+      
+      // Reset the menuToggle button position and rotation regardless of previous state
+      menuToggle.classList.add("-translate-x-64");
+      menuIcon.style.transform = "rotate(0deg)";
     } else {
-      sideMenu.style.transform = ""; // Reset transform on mobile
-      sideMenu.classList.add("-translate-x-full"); // Ensure menu is hidden on mobile
+      // On mobile view
+      sideMenu.style.transform = ""; // Reset transform
+      sideMenu.classList.add("-translate-x-full"); // Ensure menu is hidden
+      
+      // Reset toggle button position for mobile view
+      menuToggle.classList.add("-translate-x-64");
+      menuIcon.style.transform = "rotate(0deg)";
     }
   });
 
