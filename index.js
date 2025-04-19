@@ -401,7 +401,7 @@ document.addEventListener("DOMContentLoaded", () => {
                           </div>
 
                           <!-- About Me -->
-                          <p data-cursor="text" class="text-sm sm:text-base text-gray-300 max-w-2xl mx-auto mb-6">
+                          <p class="text-sm sm:text-base text-gray-300 max-w-2xl mx-auto mb-6">
                               Web開発を学習中です。フロントエンドではHTML/CSS/JavaScript、バックエンドではPHP/MySQLを使用してプロジェクトを開発しています。
                               現在、NextJsとNode.jsの学習に取り組んでおり、モダンな開発技術の習得に励んでいます。
                               <br><br>
