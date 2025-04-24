@@ -401,7 +401,7 @@ document.addEventListener("DOMContentLoaded", () => {
                           </div>
 
                           <!-- About Me -->
-                          <p data-cursor="text" class="text-sm sm:text-base text-gray-300 max-w-2xl mx-auto mb-6">
+                          <p class="text-sm sm:text-base text-gray-300 max-w-2xl mx-auto mb-6">
                               Web開発を学習中です。フロントエンドではHTML/CSS/JavaScript、バックエンドではPHP/MySQLを使用してプロジェクトを開発しています。
                               現在、VueJsとNode.jsの学習に取り組んでおり、モダンな開発技術の習得に励んでいます。
                               <br><br>
@@ -508,10 +508,30 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       title: "MusicPlayer",
       description: "オンラインで音楽を楽しむためのWebアプリケーション",
-      fullDescription:
-        'MusicPlayerは、オンライン音楽プレイヤーの機能を提供するWebアプリケーションです。再生、シャッフル、次へ、前へ、リピートなどの基本的な操作をサポートしています。プレイリストから曲をクリックするとその曲を再生できます。また、歌詞の表示機能がありリアルタイム歌ってるところをハイライトされています。<br><br>サイトのリンク先:<a href="https://musicplayer.anhnangcuaem.com" target="_blank"><button class="link-btn">こちら</button></a><br><br>Github: <a href="https://github.com/AnhNangCuaEm/MusicPlayer" target="_blank"><button class="link-btn">こちら</button></a>',
-      image:
-        "img/project-img/musicplayer/Screenshot 2025-03-10 at 10.50.03 PM.png",
+      fullDescription: `
+        <div class="space-y-4">
+          <p data-cursor="text">MusicPlayerは、オンライン音楽プレイヤーの機能を提供するWebアプリケーションです。再生、シャッフル、次へ、前へ、リピートなどの基本的な操作をサポートしています。プレイリストから曲をクリックするとその曲を再生できます。また、歌詞の表示機能がありリアルタイム歌ってるところをハイライトされています。</p>
+          
+          <div class="flex flex-col space-y-2">
+            <div class="flex items-center">
+              <span class="text-white">サイトのリンク先：</span>
+              <a href="https://musicplayer.anhnangcuaem.com" target="_blank" data-cursor="block" class="inline-flex">
+                <button class="link-btn" data-cursor="block">こちら</button>
+              </a>
+            </div>
+            
+            <div class="flex items-center">
+              <span class="text-white">Github：</span>
+              <a href="https://github.com/AnhNangCuaEm/MusicPlayer" target="_blank" data-cursor="block" class="inline-flex">
+                <button class="link-btn" data-cursor="block">こちら</button>
+              </a>
+            </div>
+          </div>
+
+            <p class="text-sm text-gray-400">※このサイトは、学習プロジェクトです。</p>
+        </div>
+      `,
+      image: "img/project-img/musicplayer/Screenshot 2025-03-10 at 10.50.03 PM.png",
       gallery: [
         "img/project-img/musicplayer/Screenshot 2025-03-10 at 10.42.51 PM.png",
         "img/project-img/musicplayer/Screenshot 2025-03-10 at 10.43.07 PM.png",
@@ -528,9 +548,33 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       title: "GreenSpace",
-      description:
-        "公園施設とイベント情報を提供する総合ポータルサイトと管理システム",
-      fullDescription: `GreenSpaceは、あらゆるデバイスに最適化されたモダンなレスポンシブデザインを採用し、直感的な操作性を実現しています。リアルタイム検索機能により、ユーザーは必要な公園やイベント情報にスムーズにアクセスできます。管理者向けには、データベースの専門知識がなくても簡単に情報を管理できる専用システムを実装。さらに、アクセス解析やユーザーフィードバックの可視化機能により、効果的な運営をサポートします。堅牢なアカウント管理システムにより、安全性と使いやすさを両立させています。<br><br>サイトのリンク先:<a href="https://www.green-space.tech" target="_blank"><button class="link-btn">こちら</button></a><br><br>Github:<a href="https://github.com/AnhNangCuaEm/GREENSPACE" target="_blank"><button class="link-btn">こちら</button></a><br><br>※このサイトは、学習プロジェクトです。`,
+      description: "公園施設とイベント情報を提供する総合ポータルサイトと管理システム",
+      fullDescription: `
+        <div class="space-y-4">
+          <p>GreenSpaceは、あらゆるデバイスに最適化されたモダンなレスポンシブデザインを採用し、直感的な操作性を実現しています。リアルタイム検索機能により、ユーザーは必要な公園やイベント情報にスムーズにアクセスできます。管理者向けには、データベースの専門知識がなくても簡単に情報を管理できる専用システムを実装。さらに、アクセス解析やユーザーフィードバックの可視化機能により、効果的な運営をサポートします。堅牢なアカウント管理システムにより、安全性と使いやすさを両立させています。</p>
+          <p>次のAdminのアカウントでログインすると管理画面にマイページからアクセスできます。
+          <br>email: hal@gmail.com
+          <br>password: halhalhal</p>
+          
+          <div class="flex flex-col space-y-2">
+            <div class="flex items-center">
+              <span class="text-white">サイトのリンク先：</span>
+              <a href="https://www.green-space.tech" target="_blank" data-cursor="block" class="inline-flex">
+                <button class="link-btn" data-cursor="block">こちら</button>
+              </a>
+            </div>
+            
+            <div class="flex items-center">
+              <span class="text-white">Github：</span>
+              <a href="https://github.com/AnhNangCuaEm/GREENSPACE" target="_blank" data-cursor="block" class="inline-flex">
+                <button class="link-btn" data-cursor="block">こちら</button>
+              </a>
+            </div>
+          </div>
+          
+          <p class="text-sm text-gray-400">※このサイトは、学習プロジェクトです。</p>
+        </div>
+      `,
       image: "img/project-img/greenspace/greenspace.jpg",
       gallery: [
         "img/project-img/greenspace/greenspace1.png",
@@ -550,11 +594,33 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       title: "DeepShinjuku",
       description: "新宿の都市伝説と怪談を紐解く没入型ウェブ体験",
-      fullDescription: `「DEEP新宿 - 新宿怪談集」は、新宿区に伝わる不思議な物語と都市伝説を現代的な視点で紹介するウェブサイトです。長い歴史の中で織りなされてきた数々の怪談や都市伝説を通じて、新宿という街が持つ独特の文化的深層に迫ります。現代都市の喧騒の中に潜む神秘的な物語の数々が、訪れる人々を魅了する新しい新宿の一面を提示します。<br><br>サイトのリンク先:<a href="https://deepshinjuku.anhnangcuaem.com" target="_blank"><button class="link-btn">こちら</button></a><br><br>Github: <a href="https://github.com/AnhNangCuaEm/Deep-Shinjuku" target="_blank"><button class="link-btn">こちら</button></a><br><br>※このサイトは、学習プロジェクトです。`,
+      fullDescription: `
+        <div class="space-y-4">
+          <p>「DEEP新宿 - 新宿怪談集」は、新宿区に伝わる不思議な物語と都市伝説を現代的な視点で紹介するウェブサイトです。長い歴史の中で織りなされてきた数々の怪談や都市伝説を通じて、新宿という街が持つ独特の文化的深層に迫ります。現代都市の喧騒の中に潜む神秘的な物語の数々が、訪れる人々を魅了する新しい新宿の一面を提示します。</p>
+          
+          <div class="flex flex-col space-y-2">
+            <div class="flex items-center">
+              <span class="text-white">サイトのリンク先：</span>
+              <a href="https://deepshinjuku.anhnangcuaem.com" target="_blank" data-cursor="block" class="inline-flex">
+                <button class="link-btn" data-cursor="block">こちら</button>
+              </a>
+            </div>
+            
+            <div class="flex items-center">
+              <span class="text-white">Github：</span>
+              <a href="https://github.com/AnhNangCuaEm/Deep-Shinjuku" target="_blank" data-cursor="block" class="inline-flex">
+                <button class="link-btn" data-cursor="block">こちら</button>
+              </a>
+            </div>
+          </div>
+          
+          <p class="text-sm text-gray-400">※このサイトは、学習プロジェクトです。</p>
+        </div>
+      `,
       image: "img/project-img/deepshinjuku/deepshinjuku.jpeg",
       gallery: [
         "img/project-img/deepshinjuku/deepshinjuku1.jpg",
-        "img/project-img/deepshinjuku/deepshinjuku2.jpg",
+        "img/project-img/deepshinjuku/deepshinjuku2.jpg", 
         "img/project-img/deepshinjuku/deepshinjuku3.png",
         "img/project-img/deepshinjuku/deepshinjuku4.jpg",
       ],
@@ -595,7 +661,29 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       title: "Boulangeries",
       description: "西新宿のベーカリーの魅力を伝えるブランドサイト",
-      fullDescription: `西新宿に位置するベーカリーの魅力を余すことなく伝えるウェブサイトです。こだわりの商品メニュー、店舗へのアクセス、最新ニュースなど、パン好きの心をくすぐる情報を丁寧に紹介しています。<br><br>サイトのリンク先:<a href="https://boulangeries.anhnangcuaem.com" target="_blank"><button class="link-btn">こちら</button></a><br><br>Github: <a href="https://github.com/AnhNangCuaEm/Boulangerie" target="_blank"><button class="link-btn">こちら</button></a><br><br>※このサイトは、学習プロジェクトです。`,
+      fullDescription: `
+        <div class="space-y-4">
+          <p>西新宿に位置するベーカリーの魅力を余すことなく伝えるウェブサイトです。こだわりの商品メニュー、店舗へのアクセス、最新ニュースなど、パン好きの心をくすぐる情報を丁寧に紹介しています。</p>
+          
+          <div class="flex flex-col space-y-2">
+            <div class="flex items-center">
+              <span class="text-white">サイトのリンク先：</span>
+              <a href="https://boulangeries.anhnangcuaem.com" target="_blank" data-cursor="block" class="inline-flex">
+                <button class="link-btn" data-cursor="block">こちら</button>
+              </a>
+            </div>
+            
+            <div class="flex items-center">
+              <span class="text-white">Github：</span>
+              <a href="https://github.com/AnhNangCuaEm/Boulangerie" target="_blank" data-cursor="block" class="inline-flex">
+                <button class="link-btn" data-cursor="block">こちら</button>
+              </a>
+            </div>
+          </div>
+          
+          <p class="text-sm text-gray-400">※このサイトは、学習プロジェクトです。</p>
+        </div>
+      `,
       image: "img/project-img/boulangerie/boulangerie.jpg",
       gallery: [
         "img/project-img/boulangerie/boulangerie1.jpg",
@@ -614,9 +702,14 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       title: "Artist",
-      description:
-        "アーティストの創造世界を表現するクリエイティブポートフォリオ",
-      fullDescription: `アーティストの独創性と芸術世界を最大限に引き出すよう設計された、モダンでインタラクティブなポートフォリオサイトです。作品展示やプロフィール、SNSフィード、今後のイベント情報など、アーティストの活動を多角的に発信します。洗練されたアニメーションとレスポンシブデザインにより、デバイスを問わず没入感のある閲覧体験を提供します。<br><br>※このサイトは、学習プロジェクトです。`,
+      description: "アーティストの創造世界を表現するクリエイティブポートフォリオ",
+      fullDescription: `
+        <div class="space-y-4">
+          <p>アーティストの独創性と芸術世界を最大限に引き出すよう設計された、モダンでインタラクティブなポートフォリオサイトです。作品展示やプロフィール、SNSフィード、今後のイベント情報など、アーティストの活動を多角的に発信します。洗練されたアニメーションとレスポンシブデザインにより、デバイスを問わず没入感のある閲覧体験を提供します。</p>
+          
+          <p class="text-sm text-gray-400">※このサイトは、学習プロジェクトです。</p>
+        </div>
+      `,
       image: "img/project-img/artistsite/artissite.jpg",
       gallery: [
         "img/project-img/artistsite/artistsite1.jpg",
@@ -634,7 +727,13 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       title: "CocoonTower",
       description: "コクーンタワーの魅力を発信する総合情報サイト",
-      fullDescription: `コクーンタワーの施設情報、テナント情報、教育機関情報を一元化した総合情報ポータルです。洗練された直感的なデザインにより、求める情報へのアクセスを容易にしています。視覚的にわかりやすいアクセスマップと施設案内により、初めての来訪者でも迷うことなく目的地へ到着できるよう配慮されています。<br><br>※このサイトは、学習プロジェクトです。`,
+      fullDescription: `
+        <div class="space-y-4">
+          <p>コクーンタワーの施設情報、テナント情報、教育機関情報を一元化した総合情報ポータルです。洗練された直感的なデザインにより、求める情報へのアクセスを容易にしています。視覚的にわかりやすいアクセスマップと施設案内により、初めての来訪者でも迷うことなく目的地へ到着できるよう配慮されています。</p>
+          
+          <p class="text-sm text-gray-400">※このサイトは、学習プロジェクトです。</p>
+        </div>
+      `,
       image: "img/project-img/cocoonsite/cocoonsite.jpg",
       gallery: [
         "img/project-img/cocoonsite/cocoonsite1.jpg",
@@ -668,7 +767,13 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       title: "MovieSite",
       description: "映画「Interstellar」の公式プロモーションサイト",
-      fullDescription: `映画「Interstellar」の魅力を伝える公式サイトです。作品概要、キャスト情報、レビューなど、映画の世界観を余すことなく紹介します。宇宙をモチーフにしたUIデザインにより、作品の壮大なスケールを視覚的に表現しています。<br><br>※このサイトは、学習プロジェクトです。`,
+      fullDescription: `
+        <div class="space-y-4">
+          <p>映画「Interstellar」の魅力を伝える公式サイトです。作品概要、キャスト情報、レビューなど、映画の世界観を余すことなく紹介します。宇宙をモチーフにしたUIデザインにより、作品の壮大なスケールを視覚的に表現しています。</p>
+          
+          <p class="text-sm text-gray-400">※このサイトは、学習プロジェクトです。</p>
+        </div>
+      `,
       image: "img/project-img/moviesite/moviesite.jpg",
       gallery: [
         "img/project-img/moviesite/moviesite1.jpg",
@@ -687,7 +792,13 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       title: "CafeSite",
       description: "架空のカフェを演出する雰囲気重視の情報サイト",
-      fullDescription: `架空のカフェの世界観を表現したウェブサイトです。カフェならではの温かみのある雰囲気をUIデザインで表現し、メニュー情報、アクセス情報、ニュースなど、実在するかのような臨場感のある情報を提供します。<br><br>※このサイトは、学習プロジェクトです。`,
+      fullDescription: `
+        <div class="space-y-4">
+          <p>架空のカフェの世界観を表現したウェブサイトです。カフェならではの温かみのある雰囲気をUIデザインで表現し、メニュー情報、アクセス情報、ニュースなど、実在するかのような臨場感のある情報を提供します。</p>
+          
+          <p class="text-sm text-gray-400">※このサイトは、学習プロジェクトです。</p>
+        </div>
+      `,
       image: "img/project-img/cafesite/cafesite.png",
       gallery: [
         "img/project-img/cafesite/cafesite1.jpg",
