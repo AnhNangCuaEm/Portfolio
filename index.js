@@ -403,7 +403,7 @@ document.addEventListener("DOMContentLoaded", () => {
                           <!-- About Me -->
                           <p data-cursor="text" class="text-sm sm:text-base text-gray-300 max-w-2xl mx-auto mb-6">
                               Web開発を学習中です。フロントエンドではHTML/CSS/JavaScript、バックエンドではPHP/MySQLを使用してプロジェクトを開発しています。
-                              現在、NextJsとNode.jsの学習に取り組んでおり、モダンな開発技術の習得に励んでいます。
+                              現在、VueJsとNode.jsの学習に取り組んでおり、モダンな開発技術の習得に励んでいます。
                               <br><br>
                               新しい技術に対する強い興味と、チーム開発への意欲を持っています。ユーザー目線のWeb開発を心がけ、価値あるサービスの創造を目指しています。
                           </p>
