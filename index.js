@@ -431,7 +431,7 @@ document.addEventListener("DOMContentLoaded", () => {
                           <div class="mb-6">
                               <h2 class="text-xl text-white font-semibold mb-3">Currently Learning</h2>
                               <div class="flex flex-wrap justify-center gap-3">
-                                  <span class="px-4 py-2 bg-purple-500/20 rounded-full text-purple-300">Nextjs</span>
+                                  <span class="px-4 py-2 bg-purple-500/20 rounded-full text-purple-300">Vuejs</span>
                                   <span class="px-4 py-2 bg-purple-500/20 rounded-full text-purple-300">Node.js</span>
                               </div>
                           </div>
