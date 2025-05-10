@@ -552,18 +552,6 @@ document.addEventListener("DOMContentLoaded", () => {
       fullDescription: `
         <div class="space-y-4">
           <p>GreenSpaceは、あらゆるデバイスに最適化されたモダンなレスポンシブデザインを採用し、直感的な操作性を実現しています。リアルタイム検索機能により、ユーザーは必要な公園やイベント情報にスムーズにアクセスできます。管理者向けには、データベースの専門知識がなくても簡単に情報を管理できる専用システムを実装。さらに、アクセス解析やユーザーフィードバックの可視化機能により、効果的な運営をサポートします。堅牢なアカウント管理システムにより、安全性と使いやすさを両立させています。</p>
-          // <p>次のAdminのアカウントでログインすると管理画面にマイページからアクセスできます。
-          // <br>email: hal@gmail.com
-          // <br>password: halhalhal</p>
-          
-          // <div class="flex flex-col space-y-2">
-          //   <div class="flex items-center">
-          //     <span class="text-white">サイトのリンク先：</span>
-          //     <a href="https://www.green-space.tech" target="_blank" data-cursor="block" class="inline-flex">
-          //       <button class="link-btn" data-cursor="block">こちら</button>
-          //     </a>
-          //   </div>
-            
             <div class="flex items-center">
               <span class="text-white">Github：</span>
               <a href="https://github.com/AnhNangCuaEm/GREENSPACE" target="_blank" data-cursor="block" class="inline-flex">
