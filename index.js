@@ -1,4 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const updateCursorClasses = () => {
+    if (isMobileOrTablet()) {
+      // Remove cursor-none class from all elements
+      document.querySelectorAll("[data-cursor], .cursor-none").forEach((el) => {
+        el.classList.remove("cursor-none");
+        if (el.hasAttribute("data-cursor")) {
+          el.removeAttribute("data-cursor");
+        }
+      });
+    }
+  };
   // Data
   const menuItems = [
     {
@@ -531,7 +542,8 @@ document.addEventListener("DOMContentLoaded", () => {
             <p class="text-sm text-gray-400">※このサイトは、学習プロジェクトです。</p>
         </div>
       `,
-      image: "img/project-img/musicplayer/Screenshot 2025-03-10 at 10.50.03 PM.png",
+      image:
+        "img/project-img/musicplayer/Screenshot 2025-03-10 at 10.50.03 PM.png",
       gallery: [
         "img/project-img/musicplayer/Screenshot 2025-03-10 at 10.42.51 PM.png",
         "img/project-img/musicplayer/Screenshot 2025-03-10 at 10.43.07 PM.png",
@@ -548,7 +560,8 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       title: "GreenSpace",
-      description: "公園施設とイベント情報を提供する総合ポータルサイトと管理システム",
+      description:
+        "公園施設とイベント情報を提供する総合ポータルサイトと管理システム",
       fullDescription: `
         <div class="space-y-4">
           <p>GreenSpaceは、あらゆるデバイスに最適化されたモダンなレスポンシブデザインを採用し、直感的な操作性を実現しています。リアルタイム検索機能により、ユーザーは必要な公園やイベント情報にスムーズにアクセスできます。管理者向けには、データベースの専門知識がなくても簡単に情報を管理できる専用システムを実装。さらに、アクセス解析やユーザーフィードバックの可視化機能により、効果的な運営をサポートします。堅牢なアカウント管理システムにより、安全性と使いやすさを両立させています。</p>
@@ -608,7 +621,7 @@ document.addEventListener("DOMContentLoaded", () => {
       image: "img/project-img/deepshinjuku/deepshinjuku.jpeg",
       gallery: [
         "img/project-img/deepshinjuku/deepshinjuku1.jpg",
-        "img/project-img/deepshinjuku/deepshinjuku2.jpg", 
+        "img/project-img/deepshinjuku/deepshinjuku2.jpg",
         "img/project-img/deepshinjuku/deepshinjuku3.png",
         "img/project-img/deepshinjuku/deepshinjuku4.jpg",
       ],
@@ -690,7 +703,8 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       title: "Artist",
-      description: "アーティストの創造世界を表現するクリエイティブポートフォリオ",
+      description:
+        "アーティストの創造世界を表現するクリエイティブポートフォリオ",
       fullDescription: `
         <div class="space-y-4">
           <p>アーティストの独創性と芸術世界を最大限に引き出すよう設計された、モダンでインタラクティブなポートフォリオサイトです。作品展示やプロフィール、SNSフィード、今後のイベント情報など、アーティストの活動を多角的に発信します。洗練されたアニメーションとレスポンシブデザインにより、デバイスを問わず没入感のある閲覧体験を提供します。</p>
@@ -1235,12 +1249,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const sideMenu = document.getElementById("sideMenu");
     const menuToggle = document.getElementById("menuToggle");
     const menuIcon = document.getElementById("menuIcon");
-  
+
     if (window.innerWidth >= 1024) {
       // On desktop view
       sideMenu.style.transform = "translate(16px, -50%)";
       sideMenu.classList.remove("-translate-x-full"); // Ensure menu is visible on desktop
-      
+
       // Reset the menuToggle button position and rotation regardless of previous state
       menuToggle.classList.add("-translate-x-64");
       menuIcon.style.transform = "rotate(0deg)";
@@ -1248,7 +1262,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // On mobile view
       sideMenu.style.transform = ""; // Reset transform
       sideMenu.classList.add("-translate-x-full"); // Ensure menu is hidden
-      
+
       // Reset toggle button position for mobile view
       menuToggle.classList.add("-translate-x-64");
       menuIcon.style.transform = "rotate(0deg)";
@@ -1257,9 +1271,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
   initSideMenuAnimation();
 
-  import("https://unpkg.com/ipad-cursor@latest").then(({ initCursor }) =>
-    initCursor()
-  );
+  function isMobileOrTablet() {
+    const userAgent = navigator.userAgent.toLowerCase();
+    const isMobile =
+      /iphone|ipad|ipod|android|blackberry|windows phone|opera mini|silk/i.test(
+        userAgent
+      );
+    const isTablet = /(ipad|tablet|playbook|silk)|(android(?!.*mobile))/i.test(
+      userAgent
+    );
+    return (
+      isMobile ||
+      isTablet ||
+      "ontouchstart" in window ||
+      window.innerWidth < 1024
+    );
+  }
+
+  // Only initialize the cursor on desktop devices
+  if (!isMobileOrTablet()) {
+    import("https://unpkg.com/ipad-cursor@latest").then(({ initCursor }) =>
+      initCursor()
+    );
+  }
 
   // Copy email to clipboard
   window.copyEmailToClipboard = function (email) {
@@ -1308,4 +1342,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 5000);
       });
   };
+
+  updateCursorClasses();
+  window.addEventListener("resize", updateCursorClasses);
 });
