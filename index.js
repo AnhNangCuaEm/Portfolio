@@ -414,7 +414,7 @@ document.addEventListener("DOMContentLoaded", () => {
                           <!-- About Me -->
                           <p class="text-sm sm:text-base text-gray-300 max-w-2xl mx-auto mb-6">
                               Web開発を学習中です。フロントエンドではHTML/CSS/JavaScript、バックエンドではPHP/MySQLを使用してプロジェクトを開発しています。
-                              現在、VueJsとNode.jsの学習に取り組んでおり、モダンな開発技術の習得に励んでいます。
+                              現在、NextjsとLaravelの学習に取り組んでおり、モダンな開発技術の習得に励んでいます。
                               <br><br>
                               新しい技術に対する強い興味と、チーム開発への意欲を持っています。ユーザー目線のWeb開発を心がけ、価値あるサービスの創造を目指しています。
                           </p>
@@ -442,8 +442,8 @@ document.addEventListener("DOMContentLoaded", () => {
                           <div class="mb-6">
                               <h2 class="text-xl text-white font-semibold mb-3">Currently Learning</h2>
                               <div class="flex flex-wrap justify-center gap-3">
-                                  <span class="px-4 py-2 bg-purple-500/20 rounded-full text-purple-300">Vuejs</span>
-                                  <span class="px-4 py-2 bg-purple-500/20 rounded-full text-purple-300">Node.js</span>
+                                  <span class="px-4 py-2 bg-purple-500/20 rounded-full text-purple-300">Nextjs</span>
+                                  <span class="px-4 py-2 bg-purple-500/20 rounded-full text-purple-300">Laravel</span>
                               </div>
                           </div>
 
