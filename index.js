@@ -34,6 +34,353 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   ];
 
+  const projects = [
+    {
+      title: "Tachikawa City",
+      description: "2カラムレイアウトの立川市の情報サイト",
+      fullDescription: `
+        <div class="space-y-4">
+          <p data-cursor="text">このウェブサイトは、東京西部にある立川市を紹介するために作成されました。立川市は充実した都市機能を持ち、公共交通機関から公園、モールまで、生活に必要なあらゆる施設が整っています。ウェブサイトは2カラムレイアウトを採用し、様々なデバイスに対応するレスポンシブデザインとなっています。トップページには印象的な大きなビジュアルを配置しており、サイトにアクセスした瞬間から訪問者の目を引き、立川市の魅力を伝えます。</p>
+
+          <div class="flex flex-col space-y-2">
+            <div class="flex items-center">
+              <span class="text-white">サイトのリンク先：</span>
+              <a href="https://tachikawacity.anhnangcuaem.com" target="_blank" class="inline-flex">
+                <button class="link-btn">こちら</button>
+              </a>
+            </div>
+            
+            <div class="flex items-center">
+              <span class="text-white">Github:</span>
+              <a href="https://github.com/AnhNangCuaEm/TachikawaCity" target="_blank"class="inline-flex">
+                <button class="link-btn">こちら</button>
+              </a>
+            </div>
+          </div>
+
+            <p class="text-sm text-gray-400">※このサイトは、学習プロジェクトです。</p>
+        </div>
+      `,
+      image:
+        "img/project-img/tachikawacity/Screenshot 2025-06-11 162739.jpg",
+      gallery: [
+        "img/project-img/tachikawacity/Screenshot 2025-06-11 162739.jpg",
+        "img/project-img/tachikawacity/Screenshot 2025-06-11 162757.jpg",
+        "img/project-img/tachikawacity/Screenshot 2025-06-11 162809.jpg",
+        "img/project-img/tachikawacity/Screenshot 2025-06-11 162827.jpg",
+      ],
+      tech: ["JavaScript", "HTML", "Tailwind CSS"],
+      team: [
+        {
+          name: "Le Ly Thanh Hai",
+          role: "Frontend Developer",
+          responsibilities: "All",
+        },
+      ],
+    },
+    {
+      title: "MusicPlayer",
+      description: "オンラインで音楽を楽しむためのWebアプリケーション",
+      fullDescription: `
+        <div class="space-y-4">
+          <p data-cursor="text">MusicPlayerは、オンライン音楽プレイヤーの機能を提供するWebアプリケーションです。再生、シャッフル、次へ、前へ、リピートなどの基本的な操作をサポートしています。プレイリストから曲をクリックするとその曲を再生できます。また、歌詞の表示機能がありリアルタイム歌ってるところをハイライトされています。</p>
+          
+          <div class="flex flex-col space-y-2">
+            <div class="flex items-center">
+              <span class="text-white">サイトのリンク先：</span>
+              <a href="https://musicplayer.anhnangcuaem.com" target="_blank" data-cursor="block" class="inline-flex">
+                <button class="link-btn" data-cursor="block">こちら</button>
+              </a>
+            </div>
+            
+            <div class="flex items-center">
+              <span class="text-white">Github：</span>
+              <a href="https://github.com/AnhNangCuaEm/MusicPlayer" target="_blank" data-cursor="block" class="inline-flex">
+                <button class="link-btn" data-cursor="block">こちら</button>
+              </a>
+            </div>
+          </div>
+
+            <p class="text-sm text-gray-400">※このサイトは、学習プロジェクトです。</p>
+        </div>
+      `,
+      image:
+        "img/project-img/musicplayer/Screenshot 2025-03-10 at 10.50.03 PM.png",
+      gallery: [
+        "img/project-img/musicplayer/Screenshot 2025-03-10 at 10.42.51 PM.png",
+        "img/project-img/musicplayer/Screenshot 2025-03-10 at 10.43.07 PM.png",
+        "img/project-img/musicplayer/Screenshot 2025-03-10 at 10.43.25 PM.png",
+      ],
+      tech: ["JavaScript", "HTML", "CSS"],
+      team: [
+        {
+          name: "Le Ly Thanh Hai",
+          role: "Frontend Developer",
+          responsibilities: "All",
+        },
+      ],
+    },
+    {
+      title: "GreenSpace",
+      description:
+        "公園施設とイベント情報を提供する総合ポータルサイトと管理システム",
+      fullDescription: `
+        <div class="space-y-4">
+          <p>GreenSpaceは、あらゆるデバイスに最適化されたモダンなレスポンシブデザインを採用し、直感的な操作性を実現しています。リアルタイム検索機能により、ユーザーは必要な公園やイベント情報にスムーズにアクセスできます。管理者向けには、データベースの専門知識がなくても簡単に情報を管理できる専用システムを実装。さらに、アクセス解析やユーザーフィードバックの可視化機能により、効果的な運営をサポートします。堅牢なアカウント管理システムにより、安全性と使いやすさを両立させています。</p>
+            <div class="flex items-center">
+              <span class="text-white">Github：</span>
+              <a href="https://github.com/AnhNangCuaEm/GREENSPACE" target="_blank" data-cursor="block" class="inline-flex">
+                <button class="link-btn" data-cursor="block">こちら</button>
+              </a>
+            </div>
+          </div>
+          
+          <p class="text-sm text-gray-400">※このサイトは、学習プロジェクトです。</p>
+        </div>
+      `,
+      image: "img/project-img/greenspace/greenspace.jpg",
+      gallery: [
+        "img/project-img/greenspace/greenspace1.png",
+        "img/project-img/greenspace/greenspace2.jpg",
+        "img/project-img/greenspace/greenspace3.jpg",
+        "img/project-img/greenspace/greenspace4.jpg",
+      ],
+      tech: ["PHP", "JavaScript", "MySQL", "CSS", "HTML"],
+      team: [
+        {
+          name: "Le Ly Thanh Hai",
+          role: "Full Stack Developer",
+          responsibilities: "All",
+        },
+      ],
+    },
+    {
+      title: "DeepShinjuku",
+      description: "新宿の都市伝説と怪談を紐解く没入型ウェブ体験",
+      fullDescription: `
+        <div class="space-y-4">
+          <p>「DEEP新宿 - 新宿怪談集」は、新宿区に伝わる不思議な物語と都市伝説を現代的な視点で紹介するウェブサイトです。長い歴史の中で織りなされてきた数々の怪談や都市伝説を通じて、新宿という街が持つ独特の文化的深層に迫ります。現代都市の喧騒の中に潜む神秘的な物語の数々が、訪れる人々を魅了する新しい新宿の一面を提示します。</p>
+          
+          <div class="flex flex-col space-y-2">
+            <div class="flex items-center">
+              <span class="text-white">サイトのリンク先：</span>
+              <a href="https://deepshinjuku.anhnangcuaem.com" target="_blank" data-cursor="block" class="inline-flex">
+                <button class="link-btn" data-cursor="block">こちら</button>
+              </a>
+            </div>
+            
+            <div class="flex items-center">
+              <span class="text-white">Github：</span>
+              <a href="https://github.com/AnhNangCuaEm/Deep-Shinjuku" target="_blank" data-cursor="block" class="inline-flex">
+                <button class="link-btn" data-cursor="block">こちら</button>
+              </a>
+            </div>
+          </div>
+          
+          <p class="text-sm text-gray-400">※このサイトは、学習プロジェクトです。</p>
+        </div>
+      `,
+      image: "img/project-img/deepshinjuku/deepshinjuku.jpeg",
+      gallery: [
+        "img/project-img/deepshinjuku/deepshinjuku1.jpg",
+        "img/project-img/deepshinjuku/deepshinjuku2.jpg",
+        "img/project-img/deepshinjuku/deepshinjuku3.png",
+        "img/project-img/deepshinjuku/deepshinjuku4.jpg",
+      ],
+      tech: ["PHP", "JavaScript", "CSS", "HTML"],
+      team: [
+        {
+          name: "Le Ly Thanh Hai",
+          role: "Backend Developer",
+          responsibilities: "Like and Comment Function, ...",
+        },
+        {
+          name: "LIUCHIAWEI",
+          role: "Frontend Developer",
+          responsibilities: "Index Page, Animation, ...",
+        },
+        {
+          name: "李森",
+          role: "UI/UX Designer",
+          responsibilities: "UI/UX Design, ...",
+        },
+        {
+          name: "KAUNGTHAR",
+          role: "Photographer",
+          responsibilities: "Photo, Presentation, ...",
+        },
+        {
+          name: "鍾嘉朗",
+          role: "Frontend Developer",
+          responsibilities: "Intro Page, ...",
+        },
+        {
+          name: "若林真緒",
+          role: "Planner",
+          responsibilities: "Plan, ...",
+        },
+      ],
+    },
+    {
+      title: "Boulangeries",
+      description: "西新宿のベーカリーの魅力を伝えるブランドサイト",
+      fullDescription: `
+        <div class="space-y-4">
+          <p>西新宿に位置するベーカリーの魅力を余すことなく伝えるウェブサイトです。こだわりの商品メニュー、店舗へのアクセス、最新ニュースなど、パン好きの心をくすぐる情報を丁寧に紹介しています。</p>
+          
+          <div class="flex flex-col space-y-2">
+            <div class="flex items-center">
+              <span class="text-white">サイトのリンク先：</span>
+              <a href="https://boulangeries.anhnangcuaem.com" target="_blank" class="inline-flex">
+                <button class="link-btn">こちら</button>
+              </a>
+            </div>
+            
+            <div class="flex items-center">
+              <span class="text-white">Github:</span>
+              <a href="https://github.com/AnhNangCuaEm/Boulangerie" target="_blank" class="inline-flex">
+                <button class="link-btn">こちら</button>
+              </a>
+            </div>
+          </div>
+          
+          <p class="text-sm text-gray-400">※このサイトは、学習プロジェクトです。</p>
+        </div>
+      `,
+      image: "img/project-img/boulangerie/boulangerie.jpg",
+      gallery: [
+        "img/project-img/boulangerie/boulangerie1.jpg",
+        "img/project-img/boulangerie/boulangerie2.jpg",
+        "img/project-img/boulangerie/boulangerie3.jpg",
+        "img/project-img/boulangerie/boulangerie4.jpg",
+      ],
+      tech: ["JavaScript", "Tailwind CSS", "HTML"],
+      team: [
+        {
+          name: "Le Ly Thanh Hai",
+          role: "Frontend Developer",
+          responsibilities: "All",
+        },
+      ],
+    },
+    {
+      title: "Artist",
+      description:
+        "アーティストの創造世界を表現するクリエイティブポートフォリオ",
+      fullDescription: `
+        <div class="space-y-4">
+          <p>アーティストの独創性と芸術世界を最大限に引き出すよう設計された、モダンでインタラクティブなポートフォリオサイトです。作品展示やプロフィール、SNSフィード、今後のイベント情報など、アーティストの活動を多角的に発信します。洗練されたアニメーションとレスポンシブデザインにより、デバイスを問わず没入感のある閲覧体験を提供します。</p>
+          
+          <p class="text-sm text-gray-400">※このサイトは、学習プロジェクトです。</p>
+        </div>
+      `,
+      image: "img/project-img/artistsite/artissite.jpg",
+      gallery: [
+        "img/project-img/artistsite/artistsite1.jpg",
+        "img/project-img/artistsite/artistsite2.jpg",
+      ],
+      tech: ["JavaScript", "CSS", "HTML"],
+      team: [
+        {
+          name: "Le Ly Thanh Hai",
+          role: "Frontend Developer",
+          responsibilities: "All",
+        },
+      ],
+    },
+    {
+      title: "CocoonTower",
+      description: "コクーンタワーの魅力を発信する総合情報サイト",
+      fullDescription: `
+        <div class="space-y-4">
+          <p>コクーンタワーの施設情報、テナント情報、教育機関情報を一元化した総合情報ポータルです。洗練された直感的なデザインにより、求める情報へのアクセスを容易にしています。視覚的にわかりやすいアクセスマップと施設案内により、初めての来訪者でも迷うことなく目的地へ到着できるよう配慮されています。</p>
+          
+          <p class="text-sm text-gray-400">※このサイトは、学習プロジェクトです。</p>
+        </div>
+      `,
+      image: "img/project-img/cocoonsite/cocoonsite.jpg",
+      gallery: [
+        "img/project-img/cocoonsite/cocoonsite1.jpg",
+        "img/project-img/cocoonsite/cocoonsite2.jpg",
+        "img/project-img/cocoonsite/cocoonsite3.jpg",
+      ],
+      tech: ["CSS", "HTML"],
+      team: [
+        {
+          name: "Le Ly Thanh Hai",
+          role: "Frontend Developer",
+          responsibilities: "Frontend development, ...",
+        },
+        {
+          name: "程世豪",
+          role: "UI/UX Designer",
+          responsibilities: "UI/UX Design, Logo Design, ...",
+        },
+        {
+          name: "有薗柊哉",
+          role: "Photographer",
+          responsibilities: "Photo, ...",
+        },
+        {
+          name: "若林真緒",
+          role: "Planner",
+          responsibilities: "Plan, ...",
+        },
+      ],
+    },
+    {
+      title: "MovieSite",
+      description: "映画「Interstellar」の公式プロモーションサイト",
+      fullDescription: `
+        <div class="space-y-4">
+          <p>映画「Interstellar」の魅力を伝える公式サイトです。作品概要、キャスト情報、レビューなど、映画の世界観を余すことなく紹介します。宇宙をモチーフにしたUIデザインにより、作品の壮大なスケールを視覚的に表現しています。</p>
+          
+          <p class="text-sm text-gray-400">※このサイトは、学習プロジェクトです。</p>
+        </div>
+      `,
+      image: "img/project-img/moviesite/moviesite.jpg",
+      gallery: [
+        "img/project-img/moviesite/moviesite1.jpg",
+        "img/project-img/moviesite/moviesite2.jpg",
+        "img/project-img/moviesite/moviesite3.jpg",
+      ],
+      tech: ["CSS", "HTML"],
+      team: [
+        {
+          name: "Le Ly Thanh Hai",
+          role: "Frontend Developer",
+          responsibilities: "All",
+        },
+      ],
+    },
+    {
+      title: "CafeSite",
+      description: "架空のカフェを演出する雰囲気重視の情報サイト",
+      fullDescription: `
+        <div class="space-y-4">
+          <p>架空のカフェの世界観を表現したウェブサイトです。カフェならではの温かみのある雰囲気をUIデザインで表現し、メニュー情報、アクセス情報、ニュースなど、実在するかのような臨場感のある情報を提供します。</p>
+          
+          <p class="text-sm text-gray-400">※このサイトは、学習プロジェクトです。</p>
+        </div>
+      `,
+      image: "img/project-img/cafesite/cafesite.png",
+      gallery: [
+        "img/project-img/cafesite/cafesite1.jpg",
+        "img/project-img/cafesite/cafesite2.jpg",
+        "img/project-img/cafesite/cafesite3.jpg",
+        "img/project-img/cafesite/cafesite4.jpg",
+      ],
+      tech: ["CSS", "HTML"],
+      team: [
+        {
+          name: "Le Ly Thanh Hai",
+          role: "Frontend Developer",
+          responsibilities: "All",
+        },
+      ],
+    },
+  ];
+
   // Main layout
   document.body.className =
     "bg-gradient-to-br from-purple-900 to-black min-h-screen flex items-center justify-center p-4";
@@ -514,310 +861,6 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
         `;
   }
-
-  const projects = [
-    {
-      title: "MusicPlayer",
-      description: "オンラインで音楽を楽しむためのWebアプリケーション",
-      fullDescription: `
-        <div class="space-y-4">
-          <p data-cursor="text">MusicPlayerは、オンライン音楽プレイヤーの機能を提供するWebアプリケーションです。再生、シャッフル、次へ、前へ、リピートなどの基本的な操作をサポートしています。プレイリストから曲をクリックするとその曲を再生できます。また、歌詞の表示機能がありリアルタイム歌ってるところをハイライトされています。</p>
-          
-          <div class="flex flex-col space-y-2">
-            <div class="flex items-center">
-              <span class="text-white">サイトのリンク先：</span>
-              <a href="https://musicplayer.anhnangcuaem.com" target="_blank" data-cursor="block" class="inline-flex">
-                <button class="link-btn" data-cursor="block">こちら</button>
-              </a>
-            </div>
-            
-            <div class="flex items-center">
-              <span class="text-white">Github：</span>
-              <a href="https://github.com/AnhNangCuaEm/MusicPlayer" target="_blank" data-cursor="block" class="inline-flex">
-                <button class="link-btn" data-cursor="block">こちら</button>
-              </a>
-            </div>
-          </div>
-
-            <p class="text-sm text-gray-400">※このサイトは、学習プロジェクトです。</p>
-        </div>
-      `,
-      image:
-        "img/project-img/musicplayer/Screenshot 2025-03-10 at 10.50.03 PM.png",
-      gallery: [
-        "img/project-img/musicplayer/Screenshot 2025-03-10 at 10.42.51 PM.png",
-        "img/project-img/musicplayer/Screenshot 2025-03-10 at 10.43.07 PM.png",
-        "img/project-img/musicplayer/Screenshot 2025-03-10 at 10.43.25 PM.png",
-      ],
-      tech: ["JavaScript", "HTML", "CSS"],
-      team: [
-        {
-          name: "Le Ly Thanh Hai",
-          role: "Frontend Developer",
-          responsibilities: "All",
-        },
-      ],
-    },
-    {
-      title: "GreenSpace",
-      description:
-        "公園施設とイベント情報を提供する総合ポータルサイトと管理システム",
-      fullDescription: `
-        <div class="space-y-4">
-          <p>GreenSpaceは、あらゆるデバイスに最適化されたモダンなレスポンシブデザインを採用し、直感的な操作性を実現しています。リアルタイム検索機能により、ユーザーは必要な公園やイベント情報にスムーズにアクセスできます。管理者向けには、データベースの専門知識がなくても簡単に情報を管理できる専用システムを実装。さらに、アクセス解析やユーザーフィードバックの可視化機能により、効果的な運営をサポートします。堅牢なアカウント管理システムにより、安全性と使いやすさを両立させています。</p>
-            <div class="flex items-center">
-              <span class="text-white">Github：</span>
-              <a href="https://github.com/AnhNangCuaEm/GREENSPACE" target="_blank" data-cursor="block" class="inline-flex">
-                <button class="link-btn" data-cursor="block">こちら</button>
-              </a>
-            </div>
-          </div>
-          
-          <p class="text-sm text-gray-400">※このサイトは、学習プロジェクトです。</p>
-        </div>
-      `,
-      image: "img/project-img/greenspace/greenspace.jpg",
-      gallery: [
-        "img/project-img/greenspace/greenspace1.png",
-        "img/project-img/greenspace/greenspace2.jpg",
-        "img/project-img/greenspace/greenspace3.jpg",
-        "img/project-img/greenspace/greenspace4.jpg",
-      ],
-      tech: ["PHP", "JavaScript", "MySQL", "CSS", "HTML"],
-      team: [
-        {
-          name: "Le Ly Thanh Hai",
-          role: "Full Stack Developer",
-          responsibilities: "All",
-        },
-      ],
-    },
-    {
-      title: "DeepShinjuku",
-      description: "新宿の都市伝説と怪談を紐解く没入型ウェブ体験",
-      fullDescription: `
-        <div class="space-y-4">
-          <p>「DEEP新宿 - 新宿怪談集」は、新宿区に伝わる不思議な物語と都市伝説を現代的な視点で紹介するウェブサイトです。長い歴史の中で織りなされてきた数々の怪談や都市伝説を通じて、新宿という街が持つ独特の文化的深層に迫ります。現代都市の喧騒の中に潜む神秘的な物語の数々が、訪れる人々を魅了する新しい新宿の一面を提示します。</p>
-          
-          <div class="flex flex-col space-y-2">
-            <div class="flex items-center">
-              <span class="text-white">サイトのリンク先：</span>
-              <a href="https://deepshinjuku.anhnangcuaem.com" target="_blank" data-cursor="block" class="inline-flex">
-                <button class="link-btn" data-cursor="block">こちら</button>
-              </a>
-            </div>
-            
-            <div class="flex items-center">
-              <span class="text-white">Github：</span>
-              <a href="https://github.com/AnhNangCuaEm/Deep-Shinjuku" target="_blank" data-cursor="block" class="inline-flex">
-                <button class="link-btn" data-cursor="block">こちら</button>
-              </a>
-            </div>
-          </div>
-          
-          <p class="text-sm text-gray-400">※このサイトは、学習プロジェクトです。</p>
-        </div>
-      `,
-      image: "img/project-img/deepshinjuku/deepshinjuku.jpeg",
-      gallery: [
-        "img/project-img/deepshinjuku/deepshinjuku1.jpg",
-        "img/project-img/deepshinjuku/deepshinjuku2.jpg",
-        "img/project-img/deepshinjuku/deepshinjuku3.png",
-        "img/project-img/deepshinjuku/deepshinjuku4.jpg",
-      ],
-      tech: ["PHP", "JavaScript", "CSS", "HTML"],
-      team: [
-        {
-          name: "Le Ly Thanh Hai",
-          role: "Backend Developer",
-          responsibilities: "Like and Comment Function, ...",
-        },
-        {
-          name: "LIUCHIAWEI",
-          role: "Frontend Developer",
-          responsibilities: "Index Page, Animation, ...",
-        },
-        {
-          name: "李森",
-          role: "UI/UX Designer",
-          responsibilities: "UI/UX Design, ...",
-        },
-        {
-          name: "KAUNGTHAR",
-          role: "Photographer",
-          responsibilities: "Photo, Presentation, ...",
-        },
-        {
-          name: "鍾嘉朗",
-          role: "Frontend Developer",
-          responsibilities: "Intro Page, ...",
-        },
-        {
-          name: "若林真緒",
-          role: "Planner",
-          responsibilities: "Plan, ...",
-        },
-      ],
-    },
-    {
-      title: "Boulangeries",
-      description: "西新宿のベーカリーの魅力を伝えるブランドサイト",
-      fullDescription: `
-        <div class="space-y-4">
-          <p>西新宿に位置するベーカリーの魅力を余すことなく伝えるウェブサイトです。こだわりの商品メニュー、店舗へのアクセス、最新ニュースなど、パン好きの心をくすぐる情報を丁寧に紹介しています。</p>
-          
-          <div class="flex flex-col space-y-2">
-            <div class="flex items-center">
-              <span class="text-white">サイトのリンク先：</span>
-              <a href="https://boulangeries.anhnangcuaem.com" target="_blank" data-cursor="block" class="inline-flex">
-                <button class="link-btn" data-cursor="block">こちら</button>
-              </a>
-            </div>
-            
-            <div class="flex items-center">
-              <span class="text-white">Github：</span>
-              <a href="https://github.com/AnhNangCuaEm/Boulangerie" target="_blank" data-cursor="block" class="inline-flex">
-                <button class="link-btn" data-cursor="block">こちら</button>
-              </a>
-            </div>
-          </div>
-          
-          <p class="text-sm text-gray-400">※このサイトは、学習プロジェクトです。</p>
-        </div>
-      `,
-      image: "img/project-img/boulangerie/boulangerie.jpg",
-      gallery: [
-        "img/project-img/boulangerie/boulangerie1.jpg",
-        "img/project-img/boulangerie/boulangerie2.jpg",
-        "img/project-img/boulangerie/boulangerie3.jpg",
-        "img/project-img/boulangerie/boulangerie4.jpg",
-      ],
-      tech: ["JavaScript", "Tailwind CSS", "HTML"],
-      team: [
-        {
-          name: "Le Ly Thanh Hai",
-          role: "Frontend Developer",
-          responsibilities: "All",
-        },
-      ],
-    },
-    {
-      title: "Artist",
-      description:
-        "アーティストの創造世界を表現するクリエイティブポートフォリオ",
-      fullDescription: `
-        <div class="space-y-4">
-          <p>アーティストの独創性と芸術世界を最大限に引き出すよう設計された、モダンでインタラクティブなポートフォリオサイトです。作品展示やプロフィール、SNSフィード、今後のイベント情報など、アーティストの活動を多角的に発信します。洗練されたアニメーションとレスポンシブデザインにより、デバイスを問わず没入感のある閲覧体験を提供します。</p>
-          
-          <p class="text-sm text-gray-400">※このサイトは、学習プロジェクトです。</p>
-        </div>
-      `,
-      image: "img/project-img/artistsite/artissite.jpg",
-      gallery: [
-        "img/project-img/artistsite/artistsite1.jpg",
-        "img/project-img/artistsite/artistsite2.jpg",
-      ],
-      tech: ["JavaScript", "CSS", "HTML"],
-      team: [
-        {
-          name: "Le Ly Thanh Hai",
-          role: "Frontend Developer",
-          responsibilities: "All",
-        },
-      ],
-    },
-    {
-      title: "CocoonTower",
-      description: "コクーンタワーの魅力を発信する総合情報サイト",
-      fullDescription: `
-        <div class="space-y-4">
-          <p>コクーンタワーの施設情報、テナント情報、教育機関情報を一元化した総合情報ポータルです。洗練された直感的なデザインにより、求める情報へのアクセスを容易にしています。視覚的にわかりやすいアクセスマップと施設案内により、初めての来訪者でも迷うことなく目的地へ到着できるよう配慮されています。</p>
-          
-          <p class="text-sm text-gray-400">※このサイトは、学習プロジェクトです。</p>
-        </div>
-      `,
-      image: "img/project-img/cocoonsite/cocoonsite.jpg",
-      gallery: [
-        "img/project-img/cocoonsite/cocoonsite1.jpg",
-        "img/project-img/cocoonsite/cocoonsite2.jpg",
-        "img/project-img/cocoonsite/cocoonsite3.jpg",
-      ],
-      tech: ["CSS", "HTML"],
-      team: [
-        {
-          name: "Le Ly Thanh Hai",
-          role: "Frontend Developer",
-          responsibilities: "Frontend development, ...",
-        },
-        {
-          name: "程世豪",
-          role: "UI/UX Designer",
-          responsibilities: "UI/UX Design, Logo Design, ...",
-        },
-        {
-          name: "有薗柊哉",
-          role: "Photographer",
-          responsibilities: "Photo, ...",
-        },
-        {
-          name: "若林真緒",
-          role: "Planner",
-          responsibilities: "Plan, ...",
-        },
-      ],
-    },
-    {
-      title: "MovieSite",
-      description: "映画「Interstellar」の公式プロモーションサイト",
-      fullDescription: `
-        <div class="space-y-4">
-          <p>映画「Interstellar」の魅力を伝える公式サイトです。作品概要、キャスト情報、レビューなど、映画の世界観を余すことなく紹介します。宇宙をモチーフにしたUIデザインにより、作品の壮大なスケールを視覚的に表現しています。</p>
-          
-          <p class="text-sm text-gray-400">※このサイトは、学習プロジェクトです。</p>
-        </div>
-      `,
-      image: "img/project-img/moviesite/moviesite.jpg",
-      gallery: [
-        "img/project-img/moviesite/moviesite1.jpg",
-        "img/project-img/moviesite/moviesite2.jpg",
-        "img/project-img/moviesite/moviesite3.jpg",
-      ],
-      tech: ["CSS", "HTML"],
-      team: [
-        {
-          name: "Le Ly Thanh Hai",
-          role: "Frontend Developer",
-          responsibilities: "All",
-        },
-      ],
-    },
-    {
-      title: "CafeSite",
-      description: "架空のカフェを演出する雰囲気重視の情報サイト",
-      fullDescription: `
-        <div class="space-y-4">
-          <p>架空のカフェの世界観を表現したウェブサイトです。カフェならではの温かみのある雰囲気をUIデザインで表現し、メニュー情報、アクセス情報、ニュースなど、実在するかのような臨場感のある情報を提供します。</p>
-          
-          <p class="text-sm text-gray-400">※このサイトは、学習プロジェクトです。</p>
-        </div>
-      `,
-      image: "img/project-img/cafesite/cafesite.png",
-      gallery: [
-        "img/project-img/cafesite/cafesite1.jpg",
-        "img/project-img/cafesite/cafesite2.jpg",
-        "img/project-img/cafesite/cafesite3.jpg",
-        "img/project-img/cafesite/cafesite4.jpg",
-      ],
-      tech: ["CSS", "HTML"],
-      team: [
-        {
-          name: "Le Ly Thanh Hai",
-          role: "Frontend Developer",
-          responsibilities: "All",
-        },
-      ],
-    },
-  ];
 
   function renderProjects() {
     return `
