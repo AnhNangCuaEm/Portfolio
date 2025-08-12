@@ -36,6 +36,49 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const projects = [
     {
+      title: "Auraflow",
+      description: "AuraFlow - 音楽体験アプリケーション",
+      fullDescription: `
+        <div class="space-y-4">
+          <p data-cursor="text">AuraFlowは、Next.jsで開発されたモダンな音楽ストリーミングアプリケーションです。色彩豊かでインタラクティブなUIを提供し、ユーザーが音楽を視覚的に楽しむことができます。主な機能には、アルバムアートに基づく背景色の自動変更、リアルなレコード盤のアニメーション、歌詞の同期表示、再生リストの管理、シャッフル・リピート機能などがあります。また、ジャンルでのフィルタリングやタイトル検索、複数のオーディオフォーマットのサポートも備えています。最新のウェブ技術を駆使して、快適な音楽体験を提供します。</p>
+
+          <div class="flex flex-col space-y-2">
+            <div class="flex items-center">
+              <span class="text-white">サイトのリンク先：</span>
+              <a href="https://auraflow.anhnangcuaem.com" target="_blank" class="inline-flex">
+                <button class="link-btn">こちら</button>
+              </a>
+            </div>
+            
+            <div class="flex items-center">
+              <span class="text-white">Github:</span>
+              <a href="https://github.com/AnhNangCuaEm/AuraFlow" target="_blank"class="inline-flex">
+                <button class="link-btn">こちら</button>
+              </a>
+            </div>
+          </div>
+
+            <p class="text-sm text-gray-400">※このサイトは、学習プロジェクトです。</p>
+        </div>
+      `,
+      image: "img/project-img/auraflow/auraflow1.jpg",
+      gallery: [
+        "img/project-img/auraflow/auraflow1.jpg",
+        "img/project-img/auraflow/auraflow2.jpg",
+        "img/project-img/auraflow/auraflow3.jpg",
+        "img/project-img/auraflow/auraflow4.jpg",
+        "img/project-img/auraflow/auraflow5.jpg",
+      ],
+      tech: ["Next.js", "Tailwind CSS", "TypeScript"],
+      team: [
+        {
+          name: "Le Ly Thanh Hai",
+          role: "Frontend Developer",
+          responsibilities: "All",
+        },
+      ],
+    },
+    {
       title: "Tachikawa City",
       description: "2カラムレイアウトの立川市の情報サイト",
       fullDescription: `
